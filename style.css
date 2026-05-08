@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin: 10px 0;
+  background: #1f1f1f;
+  color: white;
+}
+button {
+  background: #ff0050;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.qna-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 15px 0;
+  width: 1080px; /* biar pas screenshot 1080p */
+  max-width: 100%;
+}
+.qna-card textarea {
+  height: 80px;
+}
+.tools {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
