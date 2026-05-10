@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ilmu Sejarah VOC — Instituut voor Huisdeken, Batavia 1926</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+Double+Pica:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=UnifrakturMaguntia&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- GRAIN OVERLAY -->
+<div id="grain-overlay"></div>
+<div id="vignette-overlay"></div>
+
+<!-- TOPBAR -->
+<header id="topbar">
+  <div class="tb-left">
+    <div class="ivh-logo-svg">
+      <svg viewBox="0 0 60 60" width="44" height="44">
+        <circle cx="30" cy="30" r="28" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+        <text x="50%" y="38%" dominant-baseline="middle" text-anchor="middle" font-family="UnifrakturMaguntia,serif" font-size="14" fill="#8B6914">IVH</text>
+        <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="5.5" fill="#8B6914">BATAVIA·1892</text>
+        <polygon points="30,8 32,14 28,14" fill="#8B6914"/>
+        <polygon points="30,52 32,46 28,46" fill="#8B6914"/>
+        <polygon points="8,30 14,32 14,28" fill="#8B6914"/>
+        <polygon points="52,30 46,32 46,28" fill="#8B6914"/>
+      </svg>
+    </div>
+    <div class="tb-title-block">
+      <span class="tb-book-title">Ilmu Sejarah VOC</span>
+      <span class="tb-sub">Instituut voor Huisdeken · Anno 1926</span>
+    </div>
+  </div>
+  <div class="tb-center">
+    <div class="progress-track">
+      <div id="progress-fill"></div>
+    </div>
+    <span id="page-counter">Hal. <span id="cur">1</span> / 30</span>
+  </div>
+  <div class="tb-right">
+    <button class="tb-btn" id="btn-filter" title="Toggle filter kertas">🎞 Filter</button>
+    <button class="tb-btn" id="btn-export" title="Ekspor PNG">📷 Ekspor</button>
+    <button class="tb-btn" id="btn-fs" title="Layar Penuh">⛶</button>
+    <div class="part-nav">
+      <a href="part1.html" class="part-link active">I</a>
+      <a href="part2.html" class="part-link">II</a>
+      <a href="part3.html" class="part-link">III</a>
+    </div>
+  </div>
+</header>
+
+<!-- BOOK WRAPPER -->
+<div id="book-wrap">
+  <button class="nav-btn" id="btn-prev" title="Halaman sebelumnya (←)">&#8249;</button>
+  <div id="book-stage">
+
+    <!-- ═══════════════════════════════════════════════ PAGE 1 - COVER ═══ -->
+    <div class="page active" data-page="1">
+      <div class="cover-page">
+        <div class="cover-ornament-top">
+          <span class="orn-rule"></span><span class="orn-diamond">❖</span><span class="orn-rule"></span>
+        </div>
+        <div class="cover-ivh-seal">
+          <svg viewBox="0 0 120 120" width="110" height="110">
+            <circle cx="60" cy="60" r="56" fill="none" stroke="#8B6914" stroke-width="2"/>
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#8B6914" stroke-width="0.8"/>
+            <text x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" font-family="UnifrakturMaguntia,serif" font-size="28" fill="#8B6914">IVH</text>
+            <text x="50%" y="64%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="9" fill="#8B6914">INSTITUUT VOOR</text>
+            <text x="50%" y="74%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="9" fill="#8B6914">HUISDEKEN</text>
+            <text x="50%" y="84%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="7.5" fill="#8B6914">BATAVIA · MDCCCXCII</text>
+            <!-- decorative stars -->
+            <text x="50%" y="28%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#8B6914">✦ ✦ ✦</text>
+          </svg>
+        </div>
+        <div class="cover-series-label">SERI BOEK PENGETAHUAN HISTORIS · JILID I</div>
+        <div class="cover-rule"><span class="orn-rule-long"></span></div>
+        <h1 class="cover-main-title">Ilmu Sejarah</h1>
+        <h1 class="cover-voc-title">V.O.C.</h1>
+        <div class="cover-subtitle">Vereenigde Oost-Indische Compagnie<br/><em>1602 – 1799</em></div>
+        <div class="cover-rule"><span class="orn-rule-long"></span></div>
+        <div class="cover-phase">Kurikulum Merdeka Fase E — Tingkat Universitas</div>
+        <div class="cover-author">Disusun oleh: <em>Tim Tuchtraad IVH</em></div>
+        <div class="cover-edition">Edisi Pertama — Batavia, 1 Januari 1926</div>
+        <div class="cover-ornament-bot">
+          <span class="orn-rule"></span><span class="orn-diamond">❖</span><span class="orn-rule"></span>
+        </div>
+        <!-- Painting -->
+        <div class="cover-painting">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ludolf_Bakhuizen_-_Dutch_Ships_in_a_Gale_%28Warships_off_a_Rocky_Coast%29_-_2011.147.1_-_Metropolitan_Museum_of_Art.jpg/800px-Ludolf_Bakhuizen_-_Dutch_Ships_in_a_Gale_%28Warships_off_a_Rocky_Coast%29_-_2011.147.1_-_Metropolitan_Museum_of_Art.jpg" alt="Kapal VOC — Ludolf Bakhuizen" onerror="this.style.display='none'"/>
+          <div class="painting-caption">Armada VOC dalam badai. Karya Ludolf Bakhuizen, circa 1695.</div>
+        </div>
+      </div>
+      <div class="page-num">1</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PAGE 2 - HAK CIPTA ═══ -->
+    <div class="page" data-page="2">
+      <div class="page-inner formal-page">
+        <div class="formal-header">
+          <span class="orn-rule-med"></span><span> ❖ </span><span class="orn-rule-med"></span>
+        </div>
+        <h2 class="section-heading">Peringatan Hak Cipta<br/><em class="nl">Auteursrecht & Tuchtraad-Bepaling</em></h2>
+        <div class="diary-stamp">Batavia, 1 Januari 1926 — Kantor Tuchtraad IVH</div>
+        <div class="body-text">
+          <p>Boek ini diterbitkan oleh <strong>Instituut voor Huisdeken te Batavia</strong> di bawah perlindungan <span class="nl" data-tip="Peraturan tentang Hak Pengarang">Reglement op de Auteursrechten</span> tahun 1912 (Staatsblad No. 600). Segala bentuk penggandaan tanpa izin tertulis dari Kepala <span class="nl" data-tip="Dewan Disiplin / Mahkamah Kehormatan IVH">Tuchtraad</span> Instituut voor Huisdeken adalah perbuatan melanggar hukum.</p>
+          <div class="decree-box">
+            <div class="decree-title">Pasal-Pasal Tuchtraad yang Berlaku</div>
+            <div class="decree-item"><span class="decree-num">§ I</span><span>Denda setinggi-tingginya <em>f. 500,–</em> atau kurungan 3 bulan di <span class="nl" data-tip="Penjara">Gevangenis</span> Glodok.</span></div>
+            <div class="decree-item"><span class="decree-num">§ II</span><span>Pencabutan status <span class="nl" data-tip="Penghuni/Mahasiswa IVH">bewoner</span> dan larangan kegiatan akademik selama 2 tahun.</span></div>
+            <div class="decree-item"><span class="decree-num">§ III</span><span>Pembatalan seluruh nilai semester berjalan dan penghapusan nama dari daftar <span class="nl" data-tip="Pengajar/Fasilitator IVH">Prefect</span>.</span></div>
+          </div>
+          <p>Hak ilustrasi dan peta milik <em>Archief Kaartenkamer IVH, Batavia</em>. Gambar historis bersumber dari koleksi <span class="nl" data-tip="Perhimpunan Kesenian dan Ilmu Pengetahuan Batavia">Bataviaasch Genootschap van Kunsten en Wetenschappen</span> dan Rijksmuseum Amsterdam.</p>
+          <div class="katalog-box">
+            <strong>Data Katalog Boek:</strong><br/>
+            Judul: Ilmu Sejarah VOC · Jilid I (Halaman 1–30)<br/>
+            Penerbit: Instituut voor Huisdeken, Batavia<br/>
+            Tahun terbit: 1926 · Nomor Boek: IVH/HST/1926/001<br/>
+            Cetakan: 5.000 <span class="nl" data-tip="Eksemplar/Salinan">exemplaar</span>
+          </div>
+        </div>
+        <div class="formal-footer"><span class="orn-rule-med"></span><span> ❖ </span><span class="orn-rule-med"></span></div>
+      </div>
+      <div class="page-num">2</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PAGE 3 - PRAKATA ═══ -->
+    <div class="page" data-page="3">
+      <div class="page-inner">
+        <div class="chapter-label">Prakata</div>
+        <h2 class="section-heading">Sambutan Rector Magnificus</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">1 Januari 1926</span>
+            <span class="diary-loc">Kantor Rector, Gedung Utama IVH, Weltevreden — Batavia</span>
+          </div>
+          <div class="diary-sig-block">
+            <em>— Prof. Dr. H. van der Decken, Rector Magnificus IVH —</em>
+          </div>
+        </div>
+        <div class="pullquote">
+          <em>„Kennis van het verleden verlicht den weg naar de toekomst."</em>
+          <span class="pq-trans">(Pengetahuan tentang masa silam menerangi jalan menuju masa depan.)</span>
+        </div>
+        <div class="body-text">
+          <p>Dengan mengucapkan syukur kepada Tuhan Yang Maha Kuasa dan hormat yang sebesar-besarnya kepada seluruh <span class="nl" data-tip="Penghuni/Mahasiswa IVH">bewoner</span> dan <span class="nl" data-tip="Pengajar/Fasilitator IVH">prefect</span> Instituut voor Huisdeken, saya mempersembahkan boek ini kepada para pelajar yang budiman.</p>
+          <p><span class="nl" data-tip="Persekutuan Dagang Hindia Timur">Vereenigde Oost-Indische Compagnie</span> — yang dalam percakapan sehari-hari disebut <em>Kompeni</em> — adalah salah satu institusi dagang terbesar yang pernah diciptakan manusia. Berdiri 1602, bubar 1799, VOC menorehkan bekas yang amat dalam pada bumi Hindia Belanda.</p>
+          <p>Memahami VOC bukan sekadar menghafal deretan nama <span class="nl" data-tip="Gubernur Jenderal">Gouverneur-Generaal</span> atau tahun-tahun perang. Ini berarti memahami bagaimana sebuah kongsi dagang dapat membangun kerajaan, bagaimana kekuasaan tanpa kendali moral akan runtuh dari dalam, dan bagaimana rakyat Hindia — nenek moyang kita — menghadapi tekanan dari sistem yang bukan mereka ciptakan.</p>
+          <p>Boek ini ditulis dengan semangat <em>Kurikulum Merdeka</em>: merdeka berpikir, merdeka bertanya, dan merdeka mengambil kesimpulan berdasarkan bukti.</p>
+          <div class="signature-block">
+            <div class="sig-line"></div>
+            <em>Prof. Dr. H. van der Decken</em><br/>
+            <span>Rector Magnificus, Instituut voor Huisdeken</span><br/>
+            <span>Batavia, 1 Januari 1926</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">3</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PAGE 4 - PETUNJUK ═══ -->
+    <div class="page" data-page="4">
+      <div class="page-inner">
+        <div class="chapter-label">Petunjuk Penggunaan</div>
+        <h2 class="section-heading">Panduan untuk <em>Bewoner</em> & <em>Prefect</em></h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">3 Januari 1926</span>
+            <span class="diary-loc">Aula Besar IVH — Weltevreden, Batavia</span>
+          </div>
+          <p class="diary-body">Saya, sebagai Sekretaris <span class="nl" data-tip="Dewan Disiplin IVH">Tuchtraad</span>, mencatat panduan resmi penggunaan boek ini sebagaimana telah disetujui dalam rapat pleno tertanggal 28 Desember 1925. Semua bewoner wajib memahami panduan ini sebelum membuka halaman materi.</p>
+        </div>
+        <div class="guidebox">
+          <div class="guidebox-title">📖 Ikon & Elemen dalam Boek Ini</div>
+          <div class="guide-grid">
+            <div class="guide-item"><span class="guide-icon">📜</span><div><strong>Catatan Lapangan</strong><br/>Narasi orang pertama dari sudut pandang <span class="nl" data-tip="Komisaris/Pejabat VOC">Commissaris</span> VOC. Fakta autentik, gaya diary.</div></div>
+            <div class="guide-item"><span class="guide-icon">⚖️</span><div><strong>Refleksi Timbangan</strong><br/>Pertanyaan kritis HOTS. Tidak ada jawaban tunggal — semua argumen berbasis bukti diterima.</div></div>
+            <div class="guide-item"><span class="guide-icon">📊</span><div><strong>Tabel Data</strong><br/>Data historis autentik dari arsip <span class="nl" data-tip="Arsip Nasional Belanda">Nationaal Archief Den Haag</span>.</div></div>
+            <div class="guide-item"><span class="guide-icon">🎮</span><div><strong>Permainan Historis</strong><br/>Interaktif. Uji pemahaman sejarah dengan cara yang menyenangkan.</div></div>
+          </div>
+        </div>
+        <div class="body-text">
+          <h4>Cara Baca:</h4>
+          <ol class="styled-ol">
+            <li>Baca entri diary di tiap halaman — ini membangun konteks sebelum fakta.</li>
+            <li>Kata bergaris bawah <span class="nl" data-tip="Ini contoh tooltip bahasa Belanda">seperti ini</span> = istilah teknis Belanda, arahkan kursor untuk terjemahan.</li>
+            <li>Kerjakan Uji Kompetensi secara mandiri — aktif saat gelombang UAS IVH.</li>
+            <li>Navigasi: tombol ◀▶ di sisi layar, keyboard ← →, atau swipe/drag layar.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="page-num">4</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PAGE 5 - DAFTAR ISI ═══ -->
+    <div class="page" data-page="5">
+      <div class="page-inner">
+        <div class="chapter-label">Inhoudsopgave</div>
+        <h2 class="section-heading">Daftar Isi — <em>Jilid I (Hal. 1–30)</em></h2>
+        <div class="toc-grid">
+          <div class="toc-section">
+            <div class="toc-head">Pembuka</div>
+            <div class="toc-item"><span>Halaman Judul & Logo IVH</span><span>1</span></div>
+            <div class="toc-item"><span>Hak Cipta & Tuchtraad</span><span>2</span></div>
+            <div class="toc-item"><span>Prakata Rector Magnificus</span><span>3</span></div>
+            <div class="toc-item"><span>Petunjuk Penggunaan</span><span>4</span></div>
+            <div class="toc-item"><span>Daftar Isi Jilid I</span><span>5</span></div>
+            <div class="toc-item"><span>Profil Pelajar Pancasila IVH</span><span>6</span></div>
+            <div class="toc-item"><span>Alur Tujuan Pembelajaran</span><span>7</span></div>
+          </div>
+          <div class="toc-section">
+            <div class="toc-head">Bab 1 — Lahirnya Kompeni</div>
+            <div class="toc-item"><span>Eropa Abad ke-16 & Jalur Rempah</span><span>8</span></div>
+            <div class="toc-item"><span>Berdirinya VOC, 20 Maret 1602</span><span>9</span></div>
+            <div class="toc-item"><span>Octrooi & Kewenangan Quasi-State</span><span>10</span></div>
+            <div class="toc-item"><span>Enam Kamar & Heeren XVII</span><span>11</span></div>
+            <div class="toc-item"><span>Modal & Saham Perdana VOC</span><span>12</span></div>
+            <div class="toc-item"><span>Pelayaran Perdana ke Hindia</span><span>13</span></div>
+            <div class="toc-item"><span>Rivalitas Portugal & Inggris</span><span>14</span></div>
+            <div class="toc-item"><span>Pos Perdagangan Awal di Nusantara</span><span>15</span></div>
+            <div class="toc-item"><span>Profil Tokoh: J.P. Coen</span><span>16</span></div>
+            <div class="toc-item"><span>🎮 Permainan: Tebak Tokoh VOC</span><span>17</span></div>
+            <div class="toc-item"><span>Uji Kompetensi Bab 1</span><span>18</span></div>
+          </div>
+          <div class="toc-section">
+            <div class="toc-head">Bab 2 — Batavia & Dewan 17</div>
+            <div class="toc-item"><span>Penaklukan Jayakarta 1619</span><span>19</span></div>
+            <div class="toc-item"><span>Membangun Batavia — Kota Impian</span><span>20</span></div>
+            <div class="toc-item"><span>Heeren XVII: Struktur & Kuasa</span><span>21</span></div>
+            <div class="toc-item"><span>Para Gouverneur-Generaal VOC</span><span>22</span></div>
+            <div class="toc-item"><span>Kasteel & Pertahanan Batavia</span><span>23</span></div>
+            <div class="toc-item"><span>Populasi & Masyarakat Batavia</span><span>24</span></div>
+            <div class="toc-item"><span>Pelabuhan & Arus Perdagangan</span><span>25</span></div>
+            <div class="toc-item"><span>Hukum & Peradilan Batavia</span><span>26</span></div>
+            <div class="toc-item"><span>Pembantaian Cina 1740</span><span>27</span></div>
+            <div class="toc-item"><span>🎮 Permainan: Sidang Raad van Justitie</span><span>28</span></div>
+            <div class="toc-item"><span>Kehidupan Sosial & Arsitektur</span><span>29</span></div>
+            <div class="toc-item"><span>Uji Kompetensi Bab 2</span><span>30</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">5</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PAGE 6 - PROFIL PELAJAR ═══ -->
+    <div class="page" data-page="6">
+      <div class="page-inner">
+        <div class="chapter-label">Profil Pelajar</div>
+        <h2 class="section-heading">Profil Pelajar Pancasila versi IVH</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">5 Januari 1926</span>
+            <span class="diary-loc">Ruang Rapat Tuchtraad, IVH — Batavia</span>
+          </div>
+          <p class="diary-body">Dalam rapat pleno yang saya hadiri kemarin, Rector Magnificus menegaskan: <em>„Seorang bewoner yang hanya hapal sejarah tanpa memahami nilainya ibarat kapal besar tanpa kemudi."</em> Maka kami merumuskan enam dimensi Profil Pelajar Pancasila untuk konteks IVH.</p>
+        </div>
+        <div class="dimensi-grid">
+          <div class="dim-card">
+            <div class="dim-num">I</div>
+            <div class="dim-title">Beriman & Bertakwa</div>
+            <div class="dim-body">Melalui sejarah VOC, bewoner mengenali bahwa kecongkakan kuasa tanpa nilai moral berakhir pada kehancuran. VOC bangkrut bukan kalah perang — melainkan karena <span class="nl" data-tip="Korupsi">corruptie</span> yang menggerogoti dari dalam.</div>
+          </div>
+          <div class="dim-card">
+            <div class="dim-num">II</div>
+            <div class="dim-title">Berkebinekaan Global</div>
+            <div class="dim-body">VOC menghimpun pelaut Belanda, tentara Jerman, pedagang Tionghoa, dan bangsawan Jawa dalam satu sistem. Bewoner belajar menghargai kompleksitas identitas lintas budaya yang tidak sederhana.</div>
+          </div>
+          <div class="dim-card">
+            <div class="dim-num">III</div>
+            <div class="dim-title">Bergotong Royong</div>
+            <div class="dim-body">Proyek P5 "Sidang Dewan 17" melatih kolaborasi lintas peran: ada yang menjadi <span class="nl" data-tip="Gubernur Jenderal">Gouverneur-Generaal</span>, pedagang, perwakilan Jawa, dan jurnalis.</div>
+          </div>
+          <div class="dim-card">
+            <div class="dim-num">IV</div>
+            <div class="dim-title">Mandiri</div>
+            <div class="dim-body">Bewoner menganalisis sumber primer, mengolah data keuangan VOC, dan menyimpulkan sendiri penyebab keruntuhan — tanpa bergantung sepenuhnya pada penjelasan prefect.</div>
+          </div>
+          <div class="dim-card">
+            <div class="dim-num">V</div>
+            <div class="dim-title">Bernalar Kritis</div>
+            <div class="dim-body">Setiap kotak Refleksi Timbangan dirancang untuk mengasah kemampuan melihat dua sisi argumen. Apakah VOC murni villain, atau produk zamannya? Jawaban berbasis bukti.</div>
+          </div>
+          <div class="dim-card">
+            <div class="dim-num">VI</div>
+            <div class="dim-title">Kreatif</div>
+            <div class="dim-body">Bewoner didorong membuat peta konsep visual, surat <span class="nl" data-tip="Pedagang/Komisaris VOC">koopman</span>, atau rekonstruksi sidang Dewan 17 versi kreatif — menghubungkan masa lalu dengan imajinasi.</div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">6</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ PAGE 7 - ATP ═══ -->
+    <div class="page" data-page="7">
+      <div class="page-inner">
+        <div class="chapter-label">Alur Tujuan Pembelajaran</div>
+        <h2 class="section-heading">ATP Fase E — Sejarah VOC</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">6 Januari 1926</span>
+            <span class="diary-loc">Perpustakaan IVH — Weltevreden, Batavia</span>
+          </div>
+          <p class="diary-body">Hari ini saya menyusun kerangka pembelajaran resmi. Setiap bab dirancang agar bewoner tidak sekadar hafal, melainkan mampu menganalisis, mensintesis, dan mengevaluasi — tiga tangga tertinggi dalam hierarki <span class="nl" data-tip="Taksonomi berpikir Bloom">Taxonomie van Bloom</span>.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Alur Tujuan Pembelajaran — Mata Pelajaran Sejarah VOC Fase E · IVH 1926</caption>
+            <thead>
+              <tr><th>No.</th><th>Elemen</th><th>Capaian Pembelajaran</th><th>Bab</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Pemahaman Konsep</td><td>Menganalisis faktor ekonomi, politik, dan geografi pembentukan VOC 1602</td><td>1</td></tr>
+              <tr><td>2</td><td>Keterampilan Proses</td><td>Menginterpretasi data keuangan VOC 1620–1799 dan menyimpulkan tren kejatuhan</td><td>2–4</td></tr>
+              <tr><td>3</td><td>Pemahaman Konsep</td><td>Mendeskripsikan sistem monopoli rempah dan dampak Preanger Stelsel pada petani</td><td>3</td></tr>
+              <tr><td>4</td><td>Keterampilan Proses</td><td>Menyusun argumen sebab-akibat keruntuhan VOC menggunakan minimal 3 bukti historis</td><td>4</td></tr>
+              <tr><td>5</td><td>Koneksi Antar Materi</td><td>Menghubungkan warisan VOC dengan kondisi Hindia 1924 yang bewoner diami saat ini</td><td>5</td></tr>
+              <tr><td>6</td><td>Dimensi PPP</td><td>Menyajikan argumen berbasis sumber primer dalam Projek P5 Sidang Dewan 17</td><td>P5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Sebelum membaca, tuliskan satu kalimat: <em>„Apa yang Anda ketahui tentang VOC?"</em> Setelah menyelesaikan seluruh boek, buka catatan itu kembali. Apa yang berubah dari pemahaman Anda?</p>
+        </div>
+      </div>
+      <div class="page-num">7</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 8 — BAB 1 COVER ═══ -->
+    <div class="page" data-page="8">
+      <div class="page-inner bab-cover">
+        <div class="bab-ornament">❖ ❖ ❖</div>
+        <div class="bab-num">BAB SATU</div>
+        <div class="bab-roman">I</div>
+        <div class="bab-rule"><span class="orn-rule-long"></span><span> ⚜ </span><span class="orn-rule-long"></span></div>
+        <h2 class="bab-title">LAHIRNYA KOMPENI</h2>
+        <div class="bab-sub"><em>De Geboorte van de Compagnie</em></div>
+        <div class="bab-years">1594 — 1602</div>
+        <div class="bab-painting">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Dutch_East_Indiaman%2C_by_Andries_van_Eertvelt_%281590-1652%29.jpg/800px-Dutch_East_Indiaman%2C_by_Andries_van_Eertvelt_%281590-1652%29.jpg" alt="Kapal VOC" onerror="this.style.display='none'"/>
+          <div class="painting-caption">Kapal dagang VOC (<em>Oost-Indiëvaarder</em>). Karya Andries van Eertvelt, ca. 1620.</div>
+        </div>
+        <div class="bab-goals">
+          <div class="bab-goals-title">Tujuan Pembelajaran:</div>
+          <ol>
+            <li>Menjelaskan kondisi Eropa abad ke-16 yang mendorong ekspedisi ke Hindia.</li>
+            <li>Menganalisis proses pembentukan VOC pada 20 Maret 1602.</li>
+            <li>Mendeskripsikan struktur organisasi dan kewenangan VOC.</li>
+          </ol>
+        </div>
+        <div class="bab-quote">
+          <em>„De Compagnie is niet slechts een handelsinstelling; zij is een staat op zichzelf."</em>
+          <span>— J.P. Coen kepada Heeren XVII, 1614</span>
+        </div>
+      </div>
+      <div class="page-num">8</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 9 — Eropa & Jalur Rempah ═══ -->
+    <div class="page" data-page="9">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Eropa Abad ke-16 & Jalur Rempah</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">14 Maret 1602 — dua hari sebelum penandatanganan</span>
+            <span class="diary-loc">Ruang kerja Heeren Kamer Amsterdam, Prins Hendrikkade</span>
+          </div>
+          <p class="diary-body">Aku, <em>Johan Pietersz. Backer</em>, <span class="nl" data-tip="Sekretaris Perusahaan">secretaris</span> untuk Kamer Amsterdam, mencatat satu malam yang tidak akan kulupa. Di luar jendela, aroma garam Amstel bercampur dengan bau pelabuhan. Di meja depanku: setumpuk dokumen penggabungan enam kongsi. Semuanya akan berubah setelah besok lusa.</p>
+          <p class="diary-body">Tetapi sebelum itu — izinkan aku mencatat: bagaimana kita sampai di sini?</p>
+        </div>
+        <div class="body-text">
+          <p>Pada pertengahan abad ke-16, Eropa dilanda krisis perdagangan serius. Kejatuhan <span class="nl" data-tip="Konstantinopel">Constantinopel</span> ke tangan Turki Usmani pada 1453 menutup jalur darat rempah yang selama berabad-abad mengalirkan pala, cengkeh, dan lada dari Nusantara ke meja-meja bangsawan Eropa.</p>
+          <p>Rempah bukan sekadar bumbu dapur. Dalam peradaban pra-kulkas Eropa, rempah berfungsi sebagai pengawet daging, obat-obatan, parfum, bahkan simbol status sosial. Satu pon pala di Amsterdam tahun 1580 dijual <strong>f. 4,–</strong> — setara upah buruh kasar dua minggu penuh.</p>
+          <p>Bangsa Portugis adalah pelopor: Vasco da Gama membuka jalur laut ke Calicut, India, pada 1498. Tidak lama kemudian, Afonso de Albuquerque merebut Malaka (1511) dan Ternate-Tidore (1512–1522), menguasai sumber utama rempah Nusantara selama hampir seabad.</p>
+        </div>
+        <div class="fact-sidebar">
+          <div class="fs-title">FAKTA KUNCI</div>
+          <div class="fs-item"><span>Konstantinopel jatuh:</span><strong>1453</strong></div>
+          <div class="fs-item"><span>Portugis tiba Malaka:</span><strong>1511</strong></div>
+          <div class="fs-item"><span>Harga pala Amsterdam 1580:</span><strong>f. 4,–/pond</strong></div>
+          <div class="fs-item"><span>Lisbon ditutup untuk Belanda:</span><strong>1585</strong></div>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Kata "rempah-rempah" berasal dari bahasa Melayu yang artinya "campuran banyak hal." Orang Eropa menyebutnya <span class="nl" data-tip="Rempah-rempah">specerijen</span> (Belanda), akar dari bahasa Latin <em>species</em> — "barang-barang istimewa."</p>
+        </div>
+      </div>
+      <div class="page-num">9</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 10 — Berdirinya VOC ═══ -->
+    <div class="page" data-page="10">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Berdirinya VOC — 20 Maret 1602</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">20 Maret 1602, petang hari</span>
+            <span class="diary-loc">Aula Kamer Amsterdam, Prins Hendrikkade — mendung, angin dari utara</span>
+          </div>
+          <p class="diary-body">Hari ini terjadi. Pena bergantian diulurkan. Enam tanda tangan. Enam <span class="nl" data-tip="Kamar/Divisi perusahaan">kamer</span> menjadi satu. Tuan van Oldenbarnevelt berdiri dari kursinya dan berkata: <em>„Gentlemen, hari ini kita tidak sekadar mendirikan perusahaan. Kita mendirikan negara."</em> Tidak ada yang bertepuk tangan. Semua diam, menyadari beratnya kata-kata itu.</p>
+        </div>
+        <div class="body-text">
+          <p>Sebelum VOC lahir, para pedagang Belanda berlayar ke Hindia secara sendiri-sendiri. Ekspedisi <span class="nl" data-tip="Perusahaan-perusahaan awal sebelum VOC">voorcompagnieën</span> pertama dipimpin oleh Cornelis de Houtman, tiba di Banten 1596 — hampir merugi karena konflik dengan penduduk lokal dan wabah yang membunuh dua pertiga awak.</p>
+          <p>Pada <strong>20 Maret 1602</strong>, atas dorongan negarawan Johan van Oldenbarnevelt, enam perusahaan dagang bergabung menjadi satu entitas: <em><strong>Vereenigde Oost-Indische Compagnie</strong></em>. Penggabungan dilegitimasi oleh <span class="nl" data-tip="Hak monopoli eksklusif yang diberikan negara">Octrooi</span> selama 21 tahun dari <span class="nl" data-tip="Parlemen Belanda">Staten-Generaal</span>.</p>
+          <p>Yang membuat VOC revolusioner bukan sekadar skalanya — melainkan strukturnya: VOC adalah <span class="nl" data-tip="Perseroan terbatas">naamloze vennootschap</span> pertama di dunia yang menghimpun modal dari publik melalui <span class="nl" data-tip="Saham/Surat berharga">aandelen</span>. Siapa pun — pedagang, bangsawan, bahkan tukang roti — dapat membeli saham dan mendapat keuntungan.</p>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>VOC adalah <strong>korporasi saham pertama di dunia</strong> yang diperdagangkan secara publik. <span class="nl" data-tip="Bursa Saham Amsterdam">Amsterdamsche Beurs</span> didirikan tahun 1602 khusus untuk saham VOC — cikal bakal bursa saham modern!</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Penggabungan perusahaan bersaing menjadi satu monopoli dilakukan "demi kebaikan bersama." Apakah monopoli yang didukung negara seperti VOC dapat dibenarkan? Bandingkan dengan perusahaan teknologi dominan masa kini.</p>
+        </div>
+      </div>
+      <div class="page-num">10</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 11 — Octrooi ═══ -->
+    <div class="page" data-page="11">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Hak Octrooi & Kewenangan Quasi-State VOC</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">22 Maret 1602</span>
+            <span class="diary-loc">Kamer Amsterdam — membaca salinan dokumen Octrooi</span>
+          </div>
+          <p class="diary-body">Baru saja aku selesai membaca 21 pasal Octrooi yang diberikan Staten-Generaal. Aku merasa ngeri sekaligus kagum. Ini bukan sekadar lisensi dagang. Ini adalah kewenangan yang dalam bahasa terang-terangan berarti: VOC adalah negara di dalam negara.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Kewenangan Utama VOC Berdasarkan Octrooi 1602 — Sumber: Archief Staten-Generaal, Den Haag</caption>
+            <thead>
+              <tr><th>Pasal</th><th>Kewenangan</th><th>Implikasi Praktis</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>§ 3</td><td>Monopoli dagang Hindia Timur</td><td>Pedagang Belanda lain DILARANG berlayar ke jalur ini</td></tr>
+              <tr><td>§ 5</td><td>Hak membangun benteng (<span class="nl" data-tip="Benteng">forten</span>)</td><td>VOC dapat membangun fortifikasi militer di tanah asing</td></tr>
+              <tr><td>§ 6</td><td>Hak mengangkat pejabat & pasukan</td><td>Tentara, jaksa, hakim sendiri — independen dari Belanda</td></tr>
+              <tr><td>§ 8</td><td>Hak mendeklarasikan perang & damai</td><td>VOC berperang atas namanya sendiri tanpa persetujuan Amsterdam</td></tr>
+              <tr><td>§ 12</td><td>Hak mencetak mata uang (<span class="nl" data-tip="Koin uang">munten</span>)</td><td>Koin VOC berlaku di seluruh wilayah kekuasaannya</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="body-text">
+          <p>Pada puncak kejayaannya (±1670), VOC memiliki <strong>lebih dari 200 kapal perang, 50.000 tentara bayaran, dan 40.000 pegawai sipil</strong> — kekuatan militer yang melebihi banyak kerajaan Eropa pada masa itu.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>VOC diberi hak membuat perang dan perjanjian damai — yang dalam hukum internasional modern disebut <em>ius ad bellum</em> dan seharusnya hanya dimiliki negara berdaulat. Siapa yang seharusnya bertanggung jawab atas korban jiwa perang-perang VOC?</p>
+        </div>
+      </div>
+      <div class="page-num">11</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 12 — Enam Kamar & Heeren XVII ═══ -->
+    <div class="page" data-page="12">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Enam Kamar & Heeren XVII</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">25 Maret 1602</span>
+            <span class="diary-loc">Ruang Rapat Heeren XVII, Kamer Amsterdam</span>
+          </div>
+          <p class="diary-body">Rapat Heeren XVII pertama. Tujuh belas orang tua berpakaian hitam di sebuah ruangan kayu berbau tembakau. Mereka mewakili enam kota, enam kepentingan. Dan kini, semuanya harus berbicara dengan satu suara. Aku duduk di pojok belakang, mencatat setiap keputusan.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Enam Kamar VOC & Representasi di Heeren XVII — Sumber: VOC-Kamer Amsterdam, Archief 1.04.02</caption>
+            <thead>
+              <tr><th>Kamar</th><th>Kota</th><th>Jml. Direksi</th><th>Porsi Modal</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Amsterdam</td><td>Amsterdam</td><td>8 orang</td><td>50%</td></tr>
+              <tr><td>Zeeland</td><td>Middelburg</td><td>4 orang</td><td>25%</td></tr>
+              <tr><td>Delft</td><td>Delft</td><td>1 orang</td><td>~6%</td></tr>
+              <tr><td>Rotterdam</td><td>Rotterdam</td><td>1 orang</td><td>~6%</td></tr>
+              <tr><td>Hoorn</td><td>Hoorn</td><td>1 orang</td><td>~6%</td></tr>
+              <tr><td>Enkhuizen</td><td>Enkhuizen</td><td>1 orang</td><td>~6%</td></tr>
+              <tr class="total-row"><td colspan="2"><strong>+ 1 kursi Staten-Generaal</strong></td><td><strong>17 total</strong></td><td><strong>100%</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="org-chart">
+          <div class="org-row"><div class="org-box top-box">HEEREN XVII<br/><small>(Amsterdam)</small></div></div>
+          <div class="org-arrow">▼</div>
+          <div class="org-row"><div class="org-box">GOUVERNEUR-GENERAAL<br/><small>(Batavia)</small></div></div>
+          <div class="org-arrow">▼</div>
+          <div class="org-row three-cols">
+            <div class="org-box sm-box">RAAD VAN INDIË</div>
+            <div class="org-box sm-box">DIRECTEUR-GENERAAL</div>
+            <div class="org-box sm-box">COMMANDEUR</div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">12</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 13 — Modal & Saham ═══ -->
+    <div class="page" data-page="13">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Modal & Saham Perdana VOC</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">1 April 1602 — Hari Pendaftaran Saham Perdana</span>
+            <span class="diary-loc">Loket Kamer Amsterdam — antrian panjang sejak subuh</span>
+          </div>
+          <p class="diary-body">Pagi ini antrian mengular dari Prins Hendrikkade sampai ke Warmoesstraat. Ribuan orang dari segala lapisan — pedagang <span class="nl" data-tip="Kain sutera">zijde</span>, tukang roti, bahkan janda-janda tua — menggenggam uang tunai ingin membeli <span class="nl" data-tip="Saham">aandelen</span>. Ini pemandangan yang belum pernah ada sebelumnya di muka bumi ini.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Modal Awal VOC per Kamar (1602) dalam Gulden Belanda — Sumber: Koopmansboeken VOC, Nationaal Archief Den Haag</caption>
+            <thead>
+              <tr><th>Kamar</th><th>Modal Disetor (f.)</th><th>Pemegang Saham</th><th>Rata-rata/Pemegang</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Amsterdam</td><td>3.679.915</td><td>1.143 orang</td><td>f. 3.219,–</td></tr>
+              <tr><td>Zeeland</td><td>1.300.405</td><td>264 orang</td><td>f. 4.926,–</td></tr>
+              <tr><td>Delft</td><td>469.400</td><td>136 orang</td><td>f. 3.451,–</td></tr>
+              <tr><td>Rotterdam</td><td>173.000</td><td>66 orang</td><td>f. 2.621,–</td></tr>
+              <tr><td>Hoorn</td><td>266.868</td><td>90 orang</td><td>f. 2.965,–</td></tr>
+              <tr><td>Enkhuizen</td><td>540.000</td><td>229 orang</td><td>f. 2.358,–</td></tr>
+              <tr class="total-row"><td><strong>TOTAL</strong></td><td><strong>f. 6.429.588,–</strong></td><td><strong>1.928 orang</strong></td><td><strong>f. 3.335,–</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Pemegang saham terkecil VOC adalah seorang <span class="nl" data-tip="Tukang roti">bakker</span> Amsterdam bernama Pieter Harmensz yang menanamkan hanya <strong>f. 50,–</strong>. Empat puluh tahun kemudian, investasinya menghasilkan dividen kumulatif <strong>f. 437,–</strong> — hampir 9× lipat.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Nilai VOC di puncaknya (1637) diperkirakan setara <strong>$8 triliun USD (nilai 2023)</strong> — melebihi gabungan Apple, Microsoft, Saudi Aramco, dan Amazon. Apakah perbandingan nilai historis dengan uang modern benar-benar bermakna?</p>
+        </div>
+      </div>
+      <div class="page-num">13</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 14 — Pelayaran Perdana ═══ -->
+    <div class="page" data-page="14">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Pelayaran Perdana ke Hindia</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">18 Desember 1603, fajar</span>
+            <span class="diary-loc">Pelabuhan Texel — angin utara, laut abu-abu</span>
+          </div>
+          <p class="diary-body">Aku berdiri di dermaga, menyaksikan dua belas kapal perlahan meninggalkan Texel. Tiang-tiang layar mereka bagai hutan yang berjalan di atas air. Di pundak 1.100 orang itu tersandar harapan seluruh Belanda. Dan di hati setiap mereka, sebuah pertanyaan yang tidak ada yang mau mengucapkannya keras-keras: <em>berapa yang akan kembali?</em></p>
+        </div>
+        <div class="two-col">
+          <div>
+            <div class="body-text">
+              <p>Ekspedisi pertama VOC berangkat dari <span class="nl" data-tip="Pulau jangkar di lepas pantai Holland">Texel</span> pada 18 Desember 1603 di bawah pimpinan <em>Admiraal</em> Wijbrand van Warwijck. Armada 12 kapal membawa ±1.100 awak, senjata, dan sedikit barang dagangan.</p>
+              <p>Rute yang digunakan memutar Afrika selatan melalui <span class="nl" data-tip="Tanjung Harapan, Afrika Selatan">Kaap de Goede Hoop</span>, kemudian menyeberangi Samudera Hindia menuju Nusantara. Perjalanan satu arah: rata-rata <strong>6–8 bulan</strong>.</p>
+              <p>Dari setiap armada yang berangkat, rata-rata <strong>15–25% awak</strong> meninggal di lautan — akibat <span class="nl" data-tip="Skorbut/kekurangan vitamin C">scheurbuik</span>, disentri, malaria, atau badai. Dalam 197 tahun operasinya, VOC mengirim ±4.700 pelayaran.</p>
+            </div>
+          </div>
+          <div>
+            <div class="fact-sidebar">
+              <div class="fs-title">DATA PELAYARAN</div>
+              <div class="fs-item"><span>Jarak Amsterdam–Batavia:</span><strong>±24.000 km</strong></div>
+              <div class="fs-item"><span>Durasi rata-rata:</span><strong>6–8 bulan</strong></div>
+              <div class="fs-item"><span>Angka kematian:</span><strong>15–25%</strong></div>
+              <div class="fs-item"><span>Total pelayaran VOC:</span><strong>±4.700</strong></div>
+              <div class="fs-item"><span>Est. awak meninggal total:</span><strong>±1 juta jiwa</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Untuk mencegah <span class="nl" data-tip="Skorbut — penyakit kekurangan vitamin C">scheurbuik</span>, kapal VOC membawa <span class="nl" data-tip="Kubis fermentasi, sumber vitamin C">zuurkool</span> dan jeruk nipis. Namun banyak kapten kurang disiplin membagikannya — sehingga skorbut tetap menjadi pembunuh terbesar di lautan sepanjang abad ke-17.</p>
+        </div>
+      </div>
+      <div class="page-num">14</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 15 — Rivalitas ═══ -->
+    <div class="page" data-page="15">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Rivalitas dengan Portugal & Inggris</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">17 Agustus 1605</span>
+            <span class="diary-loc">Di atas kapal <em>Gouda</em>, perairan Amboina — setelah pertempuran</span>
+          </div>
+          <p class="diary-body">Hari ini kami merebut <span class="nl" data-tip="Benteng Portugis di Ambon">Kasteel Nossa Senhora da Anunciada</span> dari tangan Portugis. Dua belas tewas di pihak kami; lebih banyak di pihak mereka. <em>Commandeur</em> Matelief berkata: <em>„Kini Maluku adalah milik kita."</em> Aku mencatat dengan tangan gemetar — bukan karena takut, melainkan karena menyadari betapa mudahnya kekaisaran berpindah tangan.</p>
+        </div>
+        <div class="body-text">
+          <h4>Konfrontasi dengan Portugal</h4>
+          <p>Pertempuran laut pertama VOC melawan Portugis terjadi di perairan Banten (1601), bahkan sebelum VOC resmi berdiri. VOC kemudian secara sistematis menyerang pos Portugis: <em>Amboina</em> (1605), <em>Ternate</em> (1607), <em>Malaka</em> (1641). Pada 1663, tidak ada lagi pos Portugis di Asia Tenggara yang mengancam VOC.</p>
+          <h4>Persaingan dengan EIC (Inggris)</h4>
+          <p><span class="nl" data-tip="Perusahaan Dagang Hindia Timur Inggris">English East India Company</span> (EIC) berdiri 31 Desember 1600 — dua tahun sebelum VOC. Di lapangan Hindia, persaingan sangat keras. Konflik memuncak dalam <em>Amboina Massacre</em> 1623 — pejabat VOC mengeksekusi 20 pedagang Inggris dengan tuduhan konspirasi. Peristiwa ini memaksa EIC mundur dari kepulauan rempah dan berkonsentrasi di India.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p><em>Amboina Massacre</em> 1623 menyebabkan EIC mundur dari Maluku. Jika VOC tidak melakukan tindakan keras itu, mungkin kepulauan rempah akan dikuasai Inggris — dan sejarah Hindia Belanda bisa sangat berbeda. Apakah tindakan brutal dapat memiliki "hasil positif" dalam sejarah? Bagaimana cara menimbangnya secara etis?</p>
+        </div>
+      </div>
+      <div class="page-num">15</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 16 — Pos Perdagangan ═══ -->
+    <div class="page" data-page="16">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Lahirnya Kompeni</div>
+        <h2 class="section-heading">Pos Perdagangan Pertama di Nusantara</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">3 Maret 1609</span>
+            <span class="diary-loc">Banda Naira — mencium aroma pala untuk pertama kali</span>
+          </div>
+          <p class="diary-body">Ketika kapal kami memasuki teluk Banda Naira, harum pala memenuhi udara bahkan sebelum daratan terlihat jelas. Aku mengerti sekarang mengapa pala disebut "emas cokelat" — baunya bukan sekadar sedap, melainkan memabukkan seperti janji kekayaan tak terbatas. Dan kekayaan inilah yang menjadi akar dari semua yang akan terjadi kemudian.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Pos Perdagangan Awal VOC di Nusantara — Sumber: Daghregister Batavia, 1605–1620</caption>
+            <thead>
+              <tr><th>Lokasi</th><th>Tahun</th><th>Komoditas</th><th>Keterangan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Amboina (Ambon)</td><td>1605</td><td>Cengkeh (<span class="nl" data-tip="Cengkeh">kruidnagel</span>)</td><td>Direbut dari Portugis</td></tr>
+              <tr><td>Banda</td><td>1609</td><td>Pala & fuli</td><td>Satu-satunya sumber pala di dunia</td></tr>
+              <tr><td>Ternate</td><td>1607</td><td>Cengkeh & lada</td><td>Bekas kekuasaan Portugis</td></tr>
+              <tr><td>Banten</td><td>1603</td><td>Lada (<span class="nl" data-tip="Lada hitam">peper</span>)</td><td>Pos pertama di Jawa</td></tr>
+              <tr><td>Surat (India)</td><td>1608</td><td>Katun & nila</td><td>Jalur ke pasar India</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="body-text">
+          <p>Dari pos-pos ini, VOC membangun <em>intra-Asian trade</em> — perdagangan antar wilayah Asia tanpa harus mengirim ke Eropa. Perak dari Jepang → katun dari India → rempah dari Maluku. Keuntungan dari perdagangan segitiga ini bisa mencapai <strong>300–500%</strong> dari modal awal.</p>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>VOC adalah salah satu pelanggan terbesar senjata Jepang abad ke-17. Pedang dan senjata api Jepang dibeli VOC untuk mempersenjatai tentara bayaran (<span class="nl" data-tip="Tentara bayaran">huurlingen</span>) di Hindia — ironi yang tidak disadari oleh para <span class="nl" data-tip="Samurai Jepang">samurai</span> yang membuatnya.</p>
+        </div>
+      </div>
+      <div class="page-num">16</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 17 — Profil J.P. Coen ═══ -->
+    <div class="page" data-page="17">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 1 — Profil Tokoh</div>
+        <h2 class="section-heading">Jan Pieterszoon Coen — Arsitek Batavia</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">21 September 1629, subuh — Catatan terakhir dari arsip pribadinya</span>
+            <span class="diary-loc">Kasteel van Batavia — Coen wafat malam ini karena wabah</span>
+          </div>
+          <p class="diary-body">Aku menemukan catatan ini di laci meja kerjanya: <em>„Aku tidak menyesal apa pun. Kompeni membutuhkan Batavia, dan Batavia membutuhkan tangan yang tidak gemetar. Jika itu harus tangan saya, maka biarlah."</em> Tidak ada kata-kata tentang ribuan yang mati dalam prosesnya.</p>
+        </div>
+        <div class="tokoh-layout">
+          <div class="tokoh-portrait">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Jan_Pieterszoon_Coen.jpg/400px-Jan_Pieterszoon_Coen.jpg" alt="Jan Pieterszoon Coen" onerror="this.parentElement.innerHTML='<div class=portrait-fallback>J.P. Coen<br/>1587–1629</div>'"/>
+            <div class="portrait-caption">Jan Pieterszoon Coen<br/><em>Gubernur Jenderal VOC ke-4 & ke-6</em></div>
+          </div>
+          <div class="tokoh-bio">
+            <div class="bio-row"><span class="bio-label">Lahir:</span><span>Hoorn, Holland, 8 Januari 1587</span></div>
+            <div class="bio-row"><span class="bio-label">Wafat:</span><span>Batavia, 21 September 1629 (wabah)</span></div>
+            <div class="bio-row"><span class="bio-label">Jabatan:</span><span>Gouverneur-Generaal VOC ke-4 (1619–1623) & ke-6 (1627–1629)</span></div>
+            <div class="bio-row"><span class="bio-label">Dikenal:</span><span>Mendirikan Batavia (1619), Pembantaian Banda (1621)</span></div>
+          </div>
+        </div>
+        <div class="body-text">
+          <p>Coen lahir di Hoorn sebagai anak pedagang kain, dikirim ke Roma usia 13 tahun belajar akuntansi. Kecerdasannya dalam angka membuatnya cepat naik dari <span class="nl" data-tip="Pedagang junior VOC">onderkoopman</span> menjadi <span class="nl" data-tip="Direktur Jenderal Perdagangan">Directeur-Generaal</span> dan akhirnya <span class="nl" data-tip="Gubernur Jenderal">Gouverneur-Generaal</span> pada usia 32 tahun.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Coen menulis: <em>„Dispereert niet, ontfarmt u uwer vijanden niet, want God is met ons"</em> (Jangan putus asa, jangan kasihani musuh, karena Tuhan berpihak kepada kita). Bagaimana menilai seseorang yang melakukan kekejaman atas nama Tuhan dan kemajuan?</p>
+        </div>
+      </div>
+      <div class="page-num">17</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 18 — GAME: Tebak Tokoh ═══ -->
+    <div class="page" data-page="18">
+      <div class="page-inner">
+        <div class="chapter-label">🎮 Permainan — Bab 1</div>
+        <h2 class="section-heading">Tebak Tokoh Sejarah VOC</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">Setiap malam Rabu</span>
+            <span class="diary-loc">Ruang Rekreasi IVH — sesi permainan sejarah mingguan</span>
+          </div>
+          <p class="diary-body">Di IVH, <em>prefect</em> menggunakan permainan ini untuk melatih bewoner mengenali tokoh-tokoh historis dari petunjuk tanpa menyebut nama. Setiap giliran, tiga petunjuk diberikan dari yang paling sulit ke paling mudah. Nilai penuh hanya bila menebak di petunjuk pertama.</p>
+        </div>
+        <div id="game-tebak-tokoh">
+          <div class="game-score-bar">
+            <span>Skor: <strong id="tbt-score">0</strong></span>
+            <span>Soal: <strong id="tbt-round">1</strong>/5</span>
+            <button class="game-btn" id="tbt-restart">↺ Mulai Ulang</button>
+          </div>
+          <div id="tbt-card" class="tbt-card">
+            <div class="tbt-clues" id="tbt-clues">
+              <!-- JS akan mengisi ini -->
+            </div>
+            <div class="tbt-reveal-btn-row">
+              <button class="game-btn" id="tbt-hint">💡 Petunjuk Berikutnya</button>
+            </div>
+            <div class="tbt-options" id="tbt-options">
+              <!-- JS akan mengisi ini -->
+            </div>
+            <div id="tbt-feedback" class="tbt-feedback hidden"></div>
+          </div>
+          <div id="tbt-final" class="tbt-final hidden">
+            <div class="final-title">Permainan Selesai!</div>
+            <div>Skor akhir Anda: <strong id="tbt-final-score"></strong> / 15</div>
+            <div class="final-grade" id="tbt-grade"></div>
+            <button class="game-btn" id="tbt-play-again">Mainkan Lagi</button>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">18</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 19 — UJI KOMPETENSI BAB 1 ═══ -->
+    <div class="page" data-page="19">
+      <div class="page-inner">
+        <div class="uji-header">
+          <div class="uji-icon">📝</div>
+          <div>
+            <div class="uji-label">Uji Kompetensi</div>
+            <h2 class="uji-title">BAB 1 — Lahirnya Kompeni</h2>
+          </div>
+        </div>
+        <div class="uas-notice">
+          <strong>📣 Catatan:</strong> Pilihan ganda ini aktif sepenuhnya saat Gelombang UAS IVH berikutnya. Saat ini tersedia dalam mode <em>latihan mandiri</em> — klik pilihan untuk melihat kunci langsung.
+        </div>
+        <div class="uji-body">
+          <h4>A. Pilihan Ganda (Latihan)</h4>
+          <div class="soal-pg" id="pg-bab1">
+            <div class="soal-item" data-answer="C">
+              <div class="soal-q">1. VOC didirikan secara resmi pada 20 Maret 1602 atas dorongan negarawan bernama...</div>
+              <div class="soal-opts">
+                <div class="opt" data-opt="A">A. Cornelis de Houtman</div>
+                <div class="opt" data-opt="B">B. Jan Pieterszoon Coen</div>
+                <div class="opt" data-opt="C">C. Johan van Oldenbarnevelt</div>
+                <div class="opt" data-opt="D">D. Vasco da Gama</div>
+              </div>
+              <div class="soal-explanation hidden">✅ Jawaban: C. Oldenbarnevelt adalah arsitek penggabungan voorcompagnieën menjadi VOC, didukung Staten-Generaal.</div>
+            </div>
+            <div class="soal-item" data-answer="B">
+              <div class="soal-q">2. Berikut ini yang BUKAN kewenangan VOC berdasarkan Octrooi 1602 adalah...</div>
+              <div class="soal-opts">
+                <div class="opt" data-opt="A">A. Hak membangun benteng di tanah asing</div>
+                <div class="opt" data-opt="B">B. Hak membuat undang-undang yang mengikat rakyat Belanda</div>
+                <div class="opt" data-opt="C">C. Hak mencetak mata uang sendiri</div>
+                <div class="opt" data-opt="D">D. Hak mendeklarasikan perang</div>
+              </div>
+              <div class="soal-explanation hidden">✅ Jawaban: B. VOC tidak berwenang membuat undang-undang yang mengikat warga Belanda di dalam negeri Belanda sendiri.</div>
+            </div>
+            <div class="soal-item" data-answer="B">
+              <div class="soal-q">3. Kamar VOC yang memiliki porsi modal terbesar dan paling banyak perwakilan di Heeren XVII adalah kamar...</div>
+              <div class="soal-opts">
+                <div class="opt" data-opt="A">A. Zeeland</div>
+                <div class="opt" data-opt="B">B. Amsterdam</div>
+                <div class="opt" data-opt="C">C. Delft</div>
+                <div class="opt" data-opt="D">D. Enkhuizen</div>
+              </div>
+              <div class="soal-explanation hidden">✅ Jawaban: B. Amsterdam menyetor 50% modal dan menempatkan 8 dari 17 kursi Heeren XVII.</div>
+            </div>
+          </div>
+          <h4 style="margin-top:1rem">B. Esai Singkat</h4>
+          <div class="esai-soal">
+            <p><strong>1.</strong> Jelaskan mengapa Belanda membutuhkan VOC sebagai struktur monopoli terpusat, bukan sekadar membiarkan pedagang-pedagangnya bersaing bebas ke Hindia. Gunakan minimal dua argumen ekonomi dan satu argumen politik.</p>
+            <div class="esai-kunci-toggle">
+              <button class="game-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Lihat Kunci</button>
+              <div class="esai-kunci hidden">Argumen ekonomi: (1) Persaingan sesama Belanda menaikkan harga beli rempah di Hindia dan menekan harga jual di Amsterdam — merusak margin semua pihak. (2) Modal gabungan memungkinkan armada besar yang tidak bisa dibangun satu perusahaan. Argumen politik: Staten-Generaal butuh satu entitas untuk bernegosiasi atas nama Belanda dengan kerajaan Asia dan melawan Portugis-Spanyol.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">19</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 20 — BAB 2 COVER ═══ -->
+    <div class="page" data-page="20">
+      <div class="page-inner bab-cover">
+        <div class="bab-ornament">❖ ❖ ❖</div>
+        <div class="bab-num">BAB DUA</div>
+        <div class="bab-roman">II</div>
+        <div class="bab-rule"><span class="orn-rule-long"></span><span> ⚜ </span><span class="orn-rule-long"></span></div>
+        <h2 class="bab-title">BATAVIA & DEWAN 17</h2>
+        <div class="bab-sub"><em>Batavia & de Heeren XVII</em></div>
+        <div class="bab-years">1619 — 1740</div>
+        <div class="bab-painting">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gezicht_op_Batavia_ca._1780_-_VOC_headquarters_%28detail%29.jpg/800px-Gezicht_op_Batavia_ca._1780_-_VOC_headquarters_%28detail%29.jpg" alt="Batavia" onerror="this.style.display='none'"/>
+          <div class="painting-caption">Pemandangan Batavia circa 1780. Lukisan Andries Beeckman.</div>
+        </div>
+        <div class="bab-goals">
+          <div class="bab-goals-title">Tujuan Pembelajaran:</div>
+          <ol>
+            <li>Mendeskripsikan proses pembangunan Batavia di atas reruntuhan Jayakarta.</li>
+            <li>Menganalisis struktur dan kewenangan Heeren XVII sebagai otoritas tertinggi VOC.</li>
+            <li>Menjelaskan sistem pemerintahan, hukum, dan kehidupan sosial Batavia.</li>
+            <li>Menganalisis peristiwa Pembantaian Cina 1740 dan implikasinya.</li>
+          </ol>
+        </div>
+        <div class="bab-quote">
+          <em>„Batavia zal het Amsterdam van het Oosten zijn."</em>
+          <span>— Jan Pieterszoon Coen, 1619</span>
+        </div>
+      </div>
+      <div class="page-num">20</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 21 — Penaklukan Jayakarta ═══ -->
+    <div class="page" data-page="21">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Penaklukan Jayakarta — 30 Mei 1619</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">30 Mei 1619, tengah malam</span>
+            <span class="diary-loc">Di atas tembok pos VOC, menghadap kota Jayakarta yang terbakar</span>
+          </div>
+          <p class="diary-body">Aku menulis ini dengan tangan berlumur jelaga. Jayakarta terbakar. Gubernur Jenderal Coen berdiri di belakangku, tidak bergerak, menatap kobaran api dengan sorot mata yang tidak bisa kubaca. Ribuan warga kota kabur ke arah Banten. Besok, di atas abu ini, akan dibangun kota baru. Nama yang sudah dia pilih: <em>Batavia</em>.</p>
+        </div>
+        <div class="body-text">
+          <p>Pada 30 Mei 1619, Jan Pieterszoon Coen memimpin serangan ke kota pelabuhan Jayakarta yang dikuasai Pangeran Wijayakrama, bawahan Sultan Banten. Jayakarta jatuh dalam tempo satu malam. Coen memerintahkan pembakaran seluruh kota lama dan pembangunan kota baru di atasnya.</p>
+          <p>Pembangunan Batavia menggunakan tenaga kerja paksa (<span class="nl" data-tip="Kerja paksa/wajib kerja">gedwongen arbeid</span>): tawanan perang, budak dari Sulawesi dan Bali, serta pekerja Tionghoa. Kanal-kanal (<span class="nl" data-tip="Kanal/saluran air">grachten</span>) digali meniru Amsterdam, <span class="nl" data-tip="Benteng utama Batavia">Kasteel van Batavia</span> dibangun di muara Ciliwung.</p>
+          <p>Ironisnya, kanal-kanal itu menjadi malapetaka kesehatan. Air menggenang menjadi sarang nyamuk <em>Anopheles</em>, menyebarkan malaria yang membunuh puluhan persen penduduk setiap dekade. Batavia dijuluki <em>„het kerkhof der Europeanen"</em> — kuburan orang Eropa.</p>
+        </div>
+        <div class="fact-sidebar">
+          <div class="fs-title">DATA BATAVIA 1619</div>
+          <div class="fs-item"><span>Direbut dari:</span><strong>Pangeran Wijayakrama</strong></div>
+          <div class="fs-item"><span>Luas Kasteel awal:</span><strong>±4 hektar</strong></div>
+          <div class="fs-item"><span>Kanal pertama selesai:</span><strong>1621</strong></div>
+          <div class="fs-item"><span>Penduduk 1627:</span><strong>±8.000 jiwa</strong></div>
+        </div>
+      </div>
+      <div class="page-num">21</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 22 — Membangun Batavia ═══ -->
+    <div class="page" data-page="22">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Membangun Batavia — Kota Impian di Tropis</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">12 Oktober 1622</span>
+            <span class="diary-loc">Tepi Kanal Ciliwung, Batavia — hari ini kanal pertama resmi selesai</span>
+          </div>
+          <p class="diary-body">Selesai sudah. Tiga ratus meter kanal pertama telah digali dan dipasang batu. <em>Ingenieur</em> van Diemen berdiri di tepinya dengan bangga. Aku tidak sebangga itu — aku tahu berapa banyak budak yang mati menggali tanah rawa ini di bawah terik matahari. Tidak ada yang mencatatnya. Mereka tidak tercatat di manapun.</p>
+        </div>
+        <div class="two-col">
+          <div>
+            <div class="body-text">
+              <p>Batavia yang dibangun VOC adalah percobaan ambisius memindahkan Amsterdam ke tropis. Arsitek dan insinyur Belanda merancang kota dengan tata letak grid yang teratur, bangunan bergaya <span class="nl" data-tip="Gaya arsitektur klasik Belanda">classicistische</span> di tepi kanal.</p>
+              <h4>Bangunan-Bangunan Utama:</h4>
+              <ul class="styled-ul">
+                <li><strong>Kasteel van Batavia</strong> (1619–1650): Benteng segi lima, 360 meriam, kediaman GG. Dibongkar Daendels 1810.</li>
+                <li><strong>Stadhuis (Balai Kota)</strong> (1710): Kini Museum Sejarah Jakarta.</li>
+                <li><strong>Gereja Sion</strong> (1695): Gereja tertua yang masih berdiri di Jakarta hari ini.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="tahukah-box">
+              <div class="tk-title">💡 Tahukah Kamu?</div>
+              <p>Batavia dibangun di atas tanah rawa dengan suhu 28–32°C sepanjang tahun. Seorang pejabat VOC yang baru tiba rata-rata hanya bertahan <strong>3–5 tahun</strong> sebelum meninggal atau dipulangkan karena penyakit tropis. Kota "Amsterdam of the East" ini lebih tepat disebut kuburan orang Eropa.</p>
+            </div>
+            <div class="refleksi-box" style="margin-top:1rem">
+              <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+              <p>Arsitektur kolonial Batavia kini menjadi warisan budaya yang dilindungi dan menjadi objek wisata. Bangunan-bangunan itu dibangun oleh tenaga kerja paksa untuk melayani penjajah. Bagaimana menyikapi "warisan yang indah tapi menyakitkan" ini?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">22</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 23 — Heeren XVII ═══ -->
+    <div class="page" data-page="23">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Heeren XVII: Struktur & Kewenangan</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">14 Juni 1635</span>
+            <span class="diary-loc">Kamer Amsterdam — sidang Heeren XVII musim panas</span>
+          </div>
+          <p class="diary-body">Tujuh belas orang tua berpakaian hitam duduk di sekeliling meja kayu panjang. Bau tembakau menyengat. Di tangan salah satu dari mereka: laporan dari Batavia yang dikirim enam bulan lalu. Laporan tentang perang yang mungkin sudah selesai — atau bahkan sudah hilang dari ingatan — saat dokumen ini akhirnya dibaca. Betapa jauhnya mereka dari kenyataan yang mereka kuasai.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Kewenangan Heeren XVII vs Gouverneur-Generaal — Distribusi Kekuasaan VOC</caption>
+            <thead>
+              <tr><th>Domain</th><th>Heeren XVII (Amsterdam)</th><th>Gouverneur-Generaal (Batavia)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Kebijakan dagang</td><td>Menetapkan harga, volume, prioritas komoditas</td><td>Melaksanakan & menyesuaikan kondisi lapangan</td></tr>
+              <tr><td>Militer</td><td>Menyetujui anggaran perang, perekrutan besar</td><td>Komando taktis seluruh operasi militer</td></tr>
+              <tr><td>Personalia</td><td>Mengangkat/memberhentikan GG & pejabat tinggi</td><td>Mengangkat pejabat menengah & bawah</td></tr>
+              <tr><td>Dividen</td><td>Menentukan % dividen kepada pemegang saham</td><td>Tidak berwenang</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Tidak satu pun dari 17 anggota Heeren XVII pernah menginjakkan kaki di Hindia selama masa jabatan. Surat dari Batavia membutuhkan <strong>6–9 bulan</strong> untuk sampai ke Amsterdam, dan balasannya sama lamanya — sehingga kebijakan sering sudah usang saat tiba di tangan pelaksana.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Pengambilan keputusan oleh orang yang tidak berada di lapangan adalah kelemahan struktural kritis VOC. Apakah ada persamaan dengan perusahaan multinasional besar masa kini yang keputusannya dibuat jauh dari lapangan? Bagaimana mengatasi masalah "jarak keputusan" ini?</p>
+        </div>
+      </div>
+      <div class="page-num">23</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 24 — Gouverneur-Generaal ═══ -->
+    <div class="page" data-page="24">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Para Gouverneur-Generaal VOC</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">5 Oktober 1653</span>
+            <span class="diary-loc">Kasteel van Batavia — seremoni pelantikan GG baru</span>
+          </div>
+          <p class="diary-body">GG ke-16 dilantik hari ini. Joan Maetsuyker — wajahnya keras, sorot matanya dingin. Saat aku berdiri di barisan penyambut, aku menghitung: dari 15 GG sebelumnya, tujuh meninggal di Hindia. Tiga dipulangkan paksa karena sakit. Dua dicopot karena korupsi. Hanya tiga yang pulang dalam keadaan utuh dan terhormat. Posisi paling berkuasa di Hindia adalah posisi paling berbahaya di Hindia.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Gouverneur-Generaal VOC Paling Berpengaruh 1610–1799 — Sumber: Inventaris VOC, Nationaal Archief</caption>
+            <thead>
+              <tr><th>GG ke-</th><th>Nama</th><th>Masa Jabatan</th><th>Pencapaian / Dampak Utama</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Pieter Both</td><td>1610–1614</td><td>GG pertama; mendirikan pos dagang di Maluku & Jawa</td></tr>
+              <tr><td>4 & 6</td><td>Jan Pieterszoon Coen</td><td>1619–1623; 1627–1629</td><td>Mendirikan Batavia; pembantaian Banda 1621</td></tr>
+              <tr><td>11</td><td>Antonio van Diemen</td><td>1636–1645</td><td>Ekspansi ke Taiwan; ekspedisi Abel Tasman ke Australia</td></tr>
+              <tr><td>16</td><td>Joan Maetsuyker</td><td>1653–1678</td><td>Penaklukan Makassar; Perjanjian Bongaya 1667</td></tr>
+              <tr><td>35</td><td>G.W. van Imhoff</td><td>1743–1750</td><td>Mendirikan Bogor (Buitenzorg); reformasi gagal</td></tr>
+              <tr><td>36</td><td>Jacob Mossel</td><td>1750–1761</td><td>Korupsi sistemik; laporan keuangan dipalsukan</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Dari 36 Gouverneur-Generaal VOC, <strong>setidaknya 13 orang meninggal di Hindia</strong> — sebagian besar karena penyakit tropis. Rata-rata masa jabatan efektif hanya 4–5 tahun. Tingginya pergantian pemimpin memperburuk konsistensi kebijakan VOC.</p>
+        </div>
+      </div>
+      <div class="page-num">24</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 25 — Kasteel & Pertahanan ═══ -->
+    <div class="page" data-page="25">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Sistem Kasteel & Pertahanan Batavia</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">22 Agustus 1628 — hari ketiga pengepungan oleh Mataram</span>
+            <span class="diary-loc">Di atas tembok Kasteel van Batavia, 3 pagi</span>
+          </div>
+          <p class="diary-body">Obor-obor pasukan Mataram tampak seperti lautan bintang di kegelapan. Ribuan. Mungkin sepuluh ribu. Aku menggenggam muskeku dengan erat. Di bawah, 360 meriam Kasteel diam menunggu. <em>Commandeur</em> berkata pelan: <em>„Biarlah mereka datang. Kita tidak bergerak."</em> Dinding ini pernah dihitung: 6 meter, bata penuh. Malam ini kita akan tahu apakah perhitungan itu cukup.</p>
+        </div>
+        <div class="body-text">
+          <p>Kasteel van Batavia adalah bangunan militer terbesar di Asia Tenggara pada masanya. Berbentuk segi lima dengan <span class="nl" data-tip="Menara pertahanan sudut benteng">bastion</span> di setiap sudut, Kasteel dilengkapi 360 meriam, gudang amunisi, penjara, pengadilan, dan kediaman Gubernur Jenderal.</p>
+          <h4>Sistem Pertahanan Berlapis:</h4>
+          <ul class="styled-ul">
+            <li><strong>Tembok kota (<span class="nl" data-tip="Tembok kota">stadsmuur</span>)</strong>: 6 meter tinggi, 10 gerbang (<span class="nl" data-tip="Pintu gerbang">poorten</span>) terjaga ketat.</li>
+            <li><strong>Kanal pertahanan</strong>: Selebar 15–20 m, memisahkan kota dalam dari luar.</li>
+            <li><strong>Armada siaga di pelabuhan</strong>: Beberapa kapal perang selalu siaga di <span class="nl" data-tip="Jangkar/Pelabuhan Batavia">Reede van Batavia</span>.</li>
+          </ul>
+          <p>Sistem ini terbukti efektif saat Sultan Agung dari Mataram menyerang dua kali: <strong>1628</strong> dan <strong>1629</strong>. Kunci keberhasilan: superioritas artileri dan suplai makanan dari kapal — sementara pasukan Mataram kehabisan bekal setelah maret panjang dari pedalaman Jawa.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Sultan Agung menyerang Batavia dua kali dan gagal dua kali. Namun ia tetap dihormati sebagai raja besar yang berani melawan penjajah. Apakah keberanian melawan yang lebih kuat, meski berakhir gagal, memiliki nilai historis tersendiri?</p>
+        </div>
+      </div>
+      <div class="page-num">25</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 26 — Populasi Batavia ═══ -->
+    <div class="page" data-page="26">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Populasi & Masyarakat Batavia</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">17 April 1673</span>
+            <span class="diary-loc">Pasar Ikan Batavia — pagi hari</span>
+          </div>
+          <p class="diary-body">Suara pasar ini: Melayu, Jawa, Tionghoa, Belanda, Arab — semuanya bercampur. Seorang pedagang katun dari Coromandel beradu tawar dengan <span class="nl" data-tip="Kapiten/Pemimpin komunitas Tionghoa">Kapitein Cina</span> soal harga kain. Di pojok, seorang <span class="nl" data-tip="Bekas budak yang telah dimerdekakan dan dibaptis">Mardijker</span> menjual ikan kering sambil bernyanyi dalam bahasa Portugis-Melayu yang tidak aku mengerti tapi terdengar indah. Batavia adalah kota yang tidak seharusnya ada — dan karena itu, ia adalah kota yang paling hidup yang pernah kulihat.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Populasi Batavia berdasarkan Kelompok Etnis/Status — Sumber: Ommelanden Census, Daghregister Batavia</caption>
+            <thead>
+              <tr><th>Tahun</th><th>Eropa (VOC)</th><th>Tionghoa</th><th>Jawa/Sunda</th><th>Budak</th><th>Mardijker</th><th>Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1619</td><td>±1.200</td><td>±400</td><td>±2.000</td><td>±1.000</td><td>—</td><td>±4.600</td></tr>
+              <tr><td>1640</td><td>±2.500</td><td>±2.000</td><td>±5.000</td><td>±3.000</td><td>±1.200</td><td>±13.700</td></tr>
+              <tr><td>1673</td><td>±2.700</td><td>±3.700</td><td>±8.000</td><td>±5.000</td><td>±2.000</td><td>±21.400</td></tr>
+              <tr><td>1700</td><td>±3.500</td><td>±6.000</td><td>±12.000</td><td>±7.000</td><td>±2.500</td><td>±31.000</td></tr>
+              <tr><td>1740</td><td>±4.000</td><td>±10.000</td><td>±15.000</td><td>±9.000</td><td>±3.000</td><td>±41.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Makanan khas Betawi seperti <em>semur</em> dan <em>asinan</em> memiliki pengaruh nyata dari masakan Belanda-Tionghoa era VOC. Kata "semur" berasal dari <span class="nl" data-tip="Direbus perlahan dalam saus">smoor</span> (Belanda) — salah satu warisan VOC yang paling lezat dan paling tidak disadari.</p>
+        </div>
+      </div>
+      <div class="page-num">26</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 27 — Pembantaian Cina 1740 ═══ -->
+    <div class="page" data-page="27">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Pembantaian Cina 1740 — Tragedi yang Terlupakan</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">10 Oktober 1740, fajar — catatan darurat</span>
+            <span class="diary-loc">Gedung arsip VOC, Batavia — asap masih mengepul dari arah barat</span>
+          </div>
+          <p class="diary-body">Semalam bumi Batavia bergetar dengan pekik yang tidak bisa kugambarkan. Api membakar kawasan Ommelanden. Pagi ini aku berjalan keluar dan menemukan jalanan berlumuran darah. Tidak ada yang menghitungnya. Tidak ada yang menyelidikinya. GG Valckenier menyebutnya <em>„noodzakelijke maatregel"</em> — tindakan yang diperlukan. Aku mencatatnya di sini karena aku tidak tahan jika tidak ada yang mencatat.</p>
+        </div>
+        <div class="body-text">
+          <p>Pada malam 9–10 Oktober 1740, sebuah tragedi besar mengguncang Batavia — pogrom yang sejarawan modern sebut sebagai salah satu pembantaian etnis paling mengerikan dalam sejarah Nusantara.</p>
+          <h4>Latar Belakang:</h4>
+          <p>Ribuan orang Tionghoa terpinggirkan ekonomi akibat kemerosotan usaha gula di Ommelanden. Mereka dilihat sebagai ancaman keamanan. Pada 7 Oktober 1740, sekelompok orang Tionghoa bergerak ke arah kota — dijadikan alasan tindakan keras.</p>
+          <h4>Pembantaian:</h4>
+          <p>GG Adriaan Valckenier memerintahkan pasukan memasuki kawasan permukiman Tionghoa dan membunuh siapa pun yang ditemui. Selama dua hari penuh, pembunuhan berlangsung tanpa terkendali. Korban tewas: <strong>5.000–10.000 jiwa</strong> — hampir seluruh komunitas Tionghoa Batavia.</p>
+        </div>
+        <div class="refleksi-box">
+          <div class="refleksi-title">⚖️ Refleksi Timbangan</div>
+          <p>Pembantaian 1740 nyaris tidak dibicarakan dalam narasi sejarah arus utama. Mengapa peristiwa sebesar ini bisa "terlupakan"? Siapa yang berkepentingan agar ini tidak diingat? Apa tanggung jawab kita terhadap ingatan kolektif yang tersembunyi?</p>
+        </div>
+      </div>
+      <div class="page-num">27</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 28 — GAME: Sidang Raad ═══ -->
+    <div class="page" data-page="28">
+      <div class="page-inner">
+        <div class="chapter-label">🎮 Permainan — Bab 2</div>
+        <h2 class="section-heading">Simulasi Sidang: Kamu Adalah Hakim</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">15 Oktober 1740</span>
+            <span class="diary-loc">Ruang sidang Raad van Justitie, Kasteel van Batavia</span>
+          </div>
+          <p class="diary-body">Lima hari setelah pembantaian, <span class="nl" data-tip="Dewan Kehakiman">Raad van Justitie</span> bersidang. Kamu duduk sebagai salah satu hakim. Di depanmu, tiga kasus yang harus diputuskan. Keputusanmu akan dicatat dalam sejarah.</p>
+        </div>
+        <div id="game-sidang">
+          <div id="sidang-case" class="sidang-card">
+            <!-- JS fills -->
+          </div>
+          <div id="sidang-score-bar" class="game-score-bar">
+            <span>Kasus: <strong id="sidang-cur">1</strong>/3</span>
+            <span>Skor Keadilan: <strong id="sidang-score">0</strong>/3</span>
+          </div>
+          <div id="sidang-result" class="tbt-final hidden">
+            <div class="final-title">Sidang Selesai</div>
+            <div id="sidang-verdict"></div>
+            <button class="game-btn" id="sidang-restart">Sidang Ulang</button>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">28</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 29 — Kehidupan Sosial ═══ -->
+    <div class="page" data-page="29">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 2 — Batavia & Dewan 17</div>
+        <h2 class="section-heading">Kehidupan Sosial & Arsitektur Batavia</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">30 Desember 1710 — malam pergantian tahun</span>
+            <span class="diary-loc">Rumah dinas di Kali Besar, Batavia — pesta di tetangga</span>
+          </div>
+          <p class="diary-body">Dari jendela aku bisa dengar gamelan bercampur dengan biola Belanda. Di rumah sebelah, Tuan <em>De Groot</em> — pedagang kaya — mengadakan <span class="nl" data-tip="Pesta/perayaan">feest</span> tahun baru. Istri pertamanya (Belanda) tidak hadir. Nyai-nya (Jawa) yang mengatur hidangan. Anak-anak campuran mereka berlari di halaman tanpa perbedaan. Di Batavia ini, kategori penjajah dan terjajah tidak sesederhana yang dibayangkan di Amsterdam.</p>
+        </div>
+        <div class="two-col">
+          <div>
+            <div class="body-text">
+              <h4>Hierarki Sosial:</h4>
+              <p>Batavia memiliki hierarki sosial sangat ketat. Para pejabat VOC kaya (<span class="nl" data-tip="Tuan-tuan kaya">rijke heren</span>) tinggal di rumah besar bergaya Belanda, memiliki puluhan budak, mengenakan pakaian sutera.</p>
+              <h4>Peranakan & Budaya Campuran:</h4>
+              <p>Banyak pejabat VOC menikahi perempuan lokal — Jawa maupun Tionghoa. Anak-anak dari pernikahan ini disebut <span class="nl" data-tip="Orang-orang Indo-Eropa/keturunan campuran">Indo-Europeanen</span>. Mereka berbicara dalam bahasa campuran Melayu-Belanda-Tionghoa-Jawa — cikal bakal bahasa Betawi yang kita kenal sekarang.</p>
+            </div>
+          </div>
+          <div>
+            <div class="fact-sidebar">
+              <div class="fs-title">HIBURAN BATAVIA</div>
+              <div class="fs-item"><span>Tempat kumpul:</span><strong>Herberg (warung Belanda)</strong></div>
+              <div class="fs-item"><span>Permainan:</span><strong>Kaartspelen, sabung ayam</strong></div>
+              <div class="fs-item"><span>Musik:</span><strong>Gamelan + biola Belanda</strong></div>
+              <div class="fs-item"><span>Perayaan:</span><strong>Imlek + Hari Raja Belanda</strong></div>
+              <div class="fs-item"><span>Olahraga:</span><strong>Berkuda di Koningsplein</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">29</div>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE 30 — UJI KOMPETENSI BAB 2 ═══ -->
+    <div class="page" data-page="30">
+      <div class="page-inner">
+        <div class="uji-header">
+          <div class="uji-icon">📝</div>
+          <div>
+            <div class="uji-label">Uji Kompetensi</div>
+            <h2 class="uji-title">BAB 2 — Batavia & Dewan 17</h2>
+          </div>
+        </div>
+        <div class="uas-notice">
+          <strong>📣 Catatan:</strong> Aktif penuh saat Gelombang UAS IVH. Mode latihan: klik pilihan untuk lihat kunci.
+        </div>
+        <div class="uji-body">
+          <h4>A. Pilihan Ganda (Latihan)</h4>
+          <div class="soal-pg" id="pg-bab2">
+            <div class="soal-item" data-answer="B">
+              <div class="soal-q">1. Batavia didirikan pada 30 Mei 1619 di atas reruntuhan kota...</div>
+              <div class="soal-opts">
+                <div class="opt" data-opt="A">A. Sunda Kelapa</div>
+                <div class="opt" data-opt="B">B. Jayakarta</div>
+                <div class="opt" data-opt="C">C. Banten</div>
+                <div class="opt" data-opt="D">D. Cirebon</div>
+              </div>
+              <div class="soal-explanation hidden">✅ Jawaban: B. Jayakarta dikuasai Pangeran Wijayakrama dan dihancurkan total oleh Coen.</div>
+            </div>
+            <div class="soal-item" data-answer="A">
+              <div class="soal-q">2. Peristiwa Pembantaian Cina 1740 terjadi di bawah pemerintahan GG...</div>
+              <div class="soal-opts">
+                <div class="opt" data-opt="A">A. Adriaan Valckenier</div>
+                <div class="opt" data-opt="B">B. Jan Pieterszoon Coen</div>
+                <div class="opt" data-opt="C">C. Joan Maetsuyker</div>
+                <div class="opt" data-opt="D">D. Antonio van Diemen</div>
+              </div>
+              <div class="soal-explanation hidden">✅ Jawaban: A. Valckenier kemudian diadili di Belanda atas korupsi, bukan atas pembantaian.</div>
+            </div>
+            <div class="soal-item" data-answer="C">
+              <div class="soal-q">3. Kanal-kanal Batavia yang meniru Amsterdam berdampak negatif berupa...</div>
+              <div class="soal-opts">
+                <div class="opt" data-opt="A">A. Mempersulit transportasi pedagang Tionghoa</div>
+                <div class="opt" data-opt="B">B. Memperlambat bongkar muat di pelabuhan</div>
+                <div class="opt" data-opt="C">C. Menyebarkan malaria dan wabah penyakit</div>
+                <div class="opt" data-opt="D">D. Mengakibatkan banjir besar setiap musim hujan</div>
+              </div>
+              <div class="soal-explanation hidden">✅ Jawaban: C. Air kanal menggenang di iklim tropis menjadi sarang nyamuk Anopheles penyebar malaria.</div>
+            </div>
+          </div>
+          <h4 style="margin-top:1rem">B. Esai Singkat</h4>
+          <div class="esai-soal">
+            <p><strong>1.</strong> Mengapa komunitas Tionghoa memainkan peran ekonomi vital di Batavia VOC, dan bagaimana peran penting ini justru berkontribusi pada tragedi Pembantaian 1740?</p>
+            <div class="esai-kunci-toggle">
+              <button class="game-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Lihat Kunci</button>
+              <div class="esai-kunci hidden">Jawaban mencakup: (1) Komunitas Tionghoa sebagai penggerak sektor riil (perdagangan eceran, manufaktur gula, pemungutan pajak/pachter) yang tidak diminati orang Belanda. (2) Ketergantungan VOC menimbulkan ketimpangan ekonomi dan kecemburuan. (3) Ketika ekonomi gula memburuk, ribuan Tionghoa menganggur dan dianggap "ancaman keamanan" — memicu respons berlebihan yang berakhir pembantaian.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">30</div>
+    </div>
+
+  </div><!-- end book-stage -->
+  <button class="nav-btn" id="btn-next" title="Halaman berikutnya (→)">&#8250;</button>
+</div><!-- end book-wrap -->
+
+<!-- TOOLTIP -->
+<div id="tooltip-box"></div>
+
+<!-- EXPORT OVERLAY -->
+<div id="export-overlay" class="hidden">
+  <div class="export-modal">
+    <div class="export-title">📷 Ekspor Halaman sebagai PNG</div>
+    <p>Mengekspor halaman <strong id="export-page-num"></strong> dalam resolusi 1080p...</p>
+    <div id="export-progress">Mempersiapkan...</div>
+    <button class="game-btn" id="export-cancel">Batal</button>
+  </div>
+</div>
+
+<script src="book.js"></script>
+</body>
+</html>
