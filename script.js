@@ -9,8 +9,8 @@
   /* ──────────────────────────────────────────────
      CONFIG — detect which part file we're on
   ────────────────────────────────────────────── */
-  const filename = location.pathname.split('/').pop() || 'part1.html';
-  const PART = filename.includes('part2') ? 2 : filename.includes('part3') ? 3 : 1;
+  const filename = location.pathname.split('/').pop() || 'index.html';
+  const PART = filename.includes('index2') ? 2 : filename.includes('index3') ? 3 : 1;
   const PAGES_PER_PART = 30;
   const TOTAL_PAGES = 80;
   const partOffset = (PART - 1) * PAGES_PER_PART; // 0, 30, 60
