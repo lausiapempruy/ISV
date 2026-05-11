@@ -1,1 +1,1134 @@
--- [[coming soon]] --
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ilmu Sejarah VOC — Jilid III — IVH Batavia 1926</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+Double+Pica:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=UnifrakturMaguntia&display=swap" rel="stylesheet"/>
+<style>
+/* ── PART 3 EXTRA STYLES ── */
+.akm-stimulus {
+  border: 1px solid var(--gold-dark);
+  background: rgba(212,196,160,0.25);
+  padding: 12px 16px; margin-bottom: 14px;
+}
+.akm-stimulus-title {
+  font-family: var(--font-alt); font-size: 0.8rem; font-weight: 700;
+  color: var(--gold-dark); margin-bottom: 8px; font-variant: small-caps;
+  letter-spacing: 0.06em;
+}
+.akm-stimulus-body {
+  font-family: var(--font-body); font-size: 0.82rem; line-height: 1.65;
+  color: var(--ink); font-style: italic;
+}
+.akm-soal-group { margin-bottom: 14px; }
+.akm-soal-q {
+  font-family: var(--font-body); font-size: 0.82rem; font-weight: 600;
+  color: var(--ink); margin-bottom: 6px; line-height: 1.5;
+}
+.akm-kunci {
+  margin-top: 6px; padding: 6px 10px;
+  border-left: 3px solid var(--gold);
+  background: rgba(200,168,75,0.12);
+  font-family: var(--font-body); font-size: 0.75rem;
+  line-height: 1.5; color: var(--ink-fade);
+}
+.akm-kunci.hidden { display: none; }
+
+/* P5 Styles */
+.p5-section { margin-bottom: 16px; }
+.p5-section-title {
+  font-family: var(--font-alt); font-size: 0.88rem; font-weight: 700;
+  color: var(--gold-dark); margin-bottom: 8px; border-bottom: 1px solid var(--gold-dark);
+  padding-bottom: 4px; font-variant: small-caps;
+}
+.p5-role-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;
+}
+.p5-role-card {
+  border: 1px solid rgba(139,105,20,0.4); padding: 8px 10px;
+  background: rgba(212,196,160,0.2);
+}
+.p5-role-name {
+  font-family: var(--font-alt); font-size: 0.75rem; font-weight: 700;
+  color: var(--red-colonial); margin-bottom: 3px;
+}
+.p5-role-desc {
+  font-family: var(--font-body); font-size: 0.72rem; line-height: 1.5;
+  color: var(--ink);
+}
+.rubrik-table td, .rubrik-table th {
+  font-size: 0.72rem; padding: 4px 6px;
+}
+
+/* Indeks */
+.indeks-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px;
+}
+.indeks-letter {
+  font-family: var(--font-fraktur); font-size: 1.2rem; color: var(--gold);
+  border-bottom: 1px solid var(--gold-dark); margin-bottom: 4px; margin-top: 10px;
+}
+.indeks-item {
+  font-family: var(--font-body); font-size: 0.74rem; line-height: 1.6;
+  color: var(--ink); display: flex; justify-content: space-between;
+  border-bottom: 1px dotted rgba(139,105,20,0.2); gap: 4px;
+}
+.indeks-page {
+  color: var(--gold-dark); font-style: italic; flex-shrink: 0;
+}
+.indeks-nl {
+  color: var(--sepia-mid); font-style: italic; font-size: 0.68rem;
+}
+
+/* Biodata */
+.bio-card {
+  border: 1px solid var(--gold-dark); padding: 14px;
+  background: rgba(212,196,160,0.2); margin-bottom: 12px;
+}
+.bio-card-name {
+  font-family: var(--font-display); font-size: 1rem; font-style: italic;
+  color: var(--ink); margin-bottom: 2px;
+}
+.bio-card-role {
+  font-family: var(--font-body); font-size: 0.7rem; color: var(--gold-dark);
+  letter-spacing: 0.05em; margin-bottom: 8px;
+}
+.bio-card-body {
+  font-family: var(--font-body); font-size: 0.8rem; line-height: 1.65;
+  color: var(--ink);
+}
+
+/* Penerbit */
+.penerbit-seal {
+  text-align: center; padding: 20px 0 10px;
+}
+.penerbit-info-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px;
+}
+.penerbit-info-box {
+  border: 1px solid rgba(139,105,20,0.4); padding: 10px;
+  background: rgba(212,196,160,0.2);
+  font-family: var(--font-body); font-size: 0.78rem; line-height: 1.65;
+  color: var(--ink);
+}
+.penerbit-info-title {
+  font-family: var(--font-alt); font-size: 0.72rem; font-weight: 700;
+  color: var(--gold-dark); margin-bottom: 5px; font-variant: small-caps;
+}
+
+/* Timeline visual (hal 69) */
+.visual-timeline {
+  position: relative; padding-left: 20px; margin: 12px 0;
+}
+.visual-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+  width: 2px; background: var(--gold-dark);
+}
+.vt-item {
+  position: relative; margin-bottom: 10px; padding-left: 14px;
+}
+.vt-item::before {
+  content: '◆'; position: absolute; left: -16px; top: 1px;
+  font-size: 0.55rem; color: var(--gold);
+}
+.vt-year {
+  font-family: var(--font-alt); font-size: 0.75rem; font-weight: 700;
+  color: var(--gold-dark);
+}
+.vt-event {
+  font-family: var(--font-body); font-size: 0.8rem; line-height: 1.5;
+  color: var(--ink);
+}
+
+/* Game: Jodohkan (hal 72) */
+.match-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0;
+}
+.match-col { display: flex; flex-direction: column; gap: 5px; }
+.match-item {
+  font-family: var(--font-body); font-size: 0.78rem; padding: 6px 10px;
+  border: 1px solid rgba(139,105,20,0.3); cursor: pointer;
+  background: rgba(240,232,212,0.5); transition: background 0.2s;
+  line-height: 1.4;
+}
+.match-item:hover { background: rgba(139,105,20,0.12); }
+.match-item.selected { background: rgba(139,105,20,0.25); border-color: var(--gold); }
+.match-item.matched-correct { background: rgba(0,100,0,0.1); border-color: #006400; }
+.match-item.matched-wrong { background: rgba(122,31,31,0.1); border-color: var(--red-colonial); }
+.match-label {
+  font-family: var(--font-body); font-size: 0.68rem; color: var(--sepia-mid);
+  margin-bottom: 4px; font-variant: small-caps; letter-spacing: 0.06em;
+}
+
+@media(max-width:600px) {
+  .p5-role-grid { grid-template-columns: 1fr; }
+  .penerbit-info-grid { grid-template-columns: 1fr; }
+  .indeks-grid { grid-template-columns: 1fr; }
+  .match-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div id="grain-overlay"></div>
+<div id="vignette-overlay"></div>
+
+<header id="topbar">
+  <div class="tb-left">
+    <div class="ivh-logo-svg">
+      <svg viewBox="0 0 60 60" width="44" height="44">
+        <circle cx="30" cy="30" r="28" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+        <text x="50%" y="38%" dominant-baseline="middle" text-anchor="middle" font-family="UnifrakturMaguntia,serif" font-size="14" fill="#8B6914">IVH</text>
+        <text x="50%" y="62%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="5.5" fill="#8B6914">BATAVIA·1892</text>
+        <polygon points="30,8 32,14 28,14" fill="#8B6914"/>
+        <polygon points="30,52 32,46 28,46" fill="#8B6914"/>
+        <polygon points="8,30 14,32 14,28" fill="#8B6914"/>
+        <polygon points="52,30 46,32 46,28" fill="#8B6914"/>
+      </svg>
+    </div>
+    <div class="tb-title-block">
+      <span class="tb-book-title">Ilmu Sejarah VOC</span>
+      <span class="tb-sub">Instituut voor Huisdeken · Anno 1926</span>
+    </div>
+  </div>
+  <div class="tb-center">
+    <div class="progress-track"><div id="progress-fill"></div></div>
+    <span id="page-counter">Hal. <span id="cur">61</span> / 80</span>
+  </div>
+  <div class="tb-right">
+    <button class="tb-btn" id="btn-filter">🎞 Filter</button>
+    <button class="tb-btn" id="btn-export">📷 Ekspor</button>
+    <button class="tb-btn" id="btn-fs">⛶</button>
+    <div class="part-nav">
+      <a href="part1.html" class="part-link">I</a>
+      <a href="part2.html" class="part-link">II</a>
+      <a href="part3.html" class="part-link active">III</a>
+    </div>
+  </div>
+</header>
+
+<div id="book-wrap">
+  <button class="nav-btn" id="btn-prev">&#8249;</button>
+  <div id="book-stage">
+
+    <!-- ══════════════════ PAGE 61 — Warisan Sosial & Budaya ══ -->
+    <div class="page active" data-page="61">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 5 — Warisan VOC di Hindia 1924</div>
+        <h2 class="section-heading">Warisan Sosial & Budaya — Yang Tak Tertulis</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">11 November 1924</span>
+            <span class="diary-loc">Warung kopi di Gang Ketapang, Kota Tua Batavia</span>
+          </div>
+          <p class="diary-body">Duduk di warung kopi ini, aku mendengar percakapan dalam empat bahasa sekaligus: Melayu-Betawi, Belanda pasar, Tionghoa Hokkien, dan sedikit Jawa. Di meja sebelah, seorang <span class="nl" data-tip="Keturunan campuran Eropa-Asia">Indo</span> muda sedang membaca koran dalam bahasa Belanda, memesan kopi dalam bahasa Melayu, dan berterima kasih dalam bahasa Jawa. Inilah Batavia anno 1924. Inilah — entah mau diakui atau tidak — warisan VOC yang paling nyata: sebuah masyarakat yang tidak ada presedennya di mana pun di dunia.</p>
+        </div>
+        <div class="body-text">
+          <h4>Warisan Bahasa:</h4>
+          <p>Bahasa Melayu-Betawi yang berkembang di Batavia adalah produk langsung percampuran era VOC: kosakata Belanda (<em>gratis</em>, <em>polisi</em>, <em>kantor</em>, <em>dominee→ domine</em>), Portugis (<em>gereja</em>, <em>bendera</em>, <em>sepatu</em>), dan Tionghoa Hokkien (<em>tahu</em>, <em>bakso</em>, <em>mie</em>) melebur ke dalam bahasa Melayu yang kelak menjadi Bahasa Indonesia.</p>
+          <h4>Warisan Kuliner:</h4>
+          <p>Makanan Betawi merupakan perpaduan VOC yang paling dapat dirasa: <em>semur</em> (dari <span class="nl" data-tip="Direbus perlahan dalam saus gelap">smoor</span> Belanda), <em>asinan</em> (dari <span class="nl" data-tip="Sayuran/buah yang diasinkan">zuur</span>), <em>laksa</em> (Tionghoa-Melayu), dan berbagai masakan berbumbu rempah Maluku yang awalnya hanya tersedia bagi elite VOC.</p>
+          <h4>Warisan Musik:</h4>
+          <p>Musik <em>keroncong</em> — yang pada 1924 sudah populer di seluruh Jawa — adalah warisan langsung komunitas <span class="nl" data-tip="Bekas budak yang dimerdekakan dan dibaptis">Mardijker</span> Batavia yang mencampur melodi Portugis dengan instrumen Jawa dan sensibilitas Melayu.</p>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Tahukah Kamu?</div>
+          <p>Kata "polisi" dalam Bahasa Indonesia berasal dari bahasa Belanda <span class="nl" data-tip="Polisi / kepolisian">politie</span>. Kata "gratis" sama persis dengan Belanda. "Kantor" dari <span class="nl" data-tip="Kantor / ruang kerja">kantoor</span>. "Wortel" dari <span class="nl" data-tip="Wortel / carrot">wortel</span>. Lebih dari <strong>3.000 kata</strong> dalam Bahasa Indonesia berasal dari bahasa Belanda — warisan VOC yang kita ucapkan setiap hari tanpa sadar.</p>
+        </div>
+      </div>
+      <div class="page-num">61</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 62 — Sintesis: Mengapa VOC Penting ══ -->
+    <div class="page" data-page="62">
+      <div class="page-inner">
+        <div class="chapter-label">Bab 5 — Warisan VOC di Hindia 1924</div>
+        <h2 class="section-heading">Sintesis — Mengapa Sejarah VOC Masih Penting di 1924</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">31 Desember 1924 — malam akhir tahun, menutup naskah boek ini</span>
+            <span class="diary-loc">Meja kerja di IVH, lampu minyak menyala sendirian</span>
+          </div>
+          <p class="diary-body">Malam terakhir tahun 1924. Aku menutup naskah terakhir boek ini. Selama setahun lebih aku menulis tentang VOC — sebuah institusi yang sudah mati lebih dari seabad sebelum aku lahir. Pertanyaan yang selalu muncul dari teman-teman: <em>„Untuk apa belajar sejarah yang sudah usang?"</em> Dan setiap kali, aku teringat petani tua di Cianjur yang bertanya: siapa yang akan ditanam anakku? Sejarah bukan tentang yang sudah mati. Sejarah adalah tentang mengapa hari ini terasa seperti ini.</p>
+        </div>
+        <div class="body-text">
+          <p>Setelah menelusuri 197 tahun sejarah VOC, berikut adalah sintesis mengapa sejarah ini relevan bagi setiap bewoner IVH yang hidup di Hindia anno 1924:</p>
+        </div>
+        <div class="peta-konsep-visual">
+          <div style="text-align:center; font-family:var(--font-fraktur); font-size:1.4rem; color:var(--gold); margin:8px 0">VOC 1602–1799</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:10px">
+            <div style="border:1px solid var(--gold-dark); padding:10px; background:rgba(212,196,160,0.25); text-align:center">
+              <div style="font-family:var(--font-alt);font-size:0.72rem;font-weight:700;color:var(--gold-dark);margin-bottom:5px">EKONOMI</div>
+              <div style="font-family:var(--font-body);font-size:0.72rem;line-height:1.5;color:var(--ink)">Sistem perkebunan · Monopsoni · Ketimpangan distribusi tanah · Pola ekspor bahan mentah</div>
+            </div>
+            <div style="border:1px solid var(--gold-dark); padding:10px; background:rgba(212,196,160,0.25); text-align:center">
+              <div style="font-family:var(--font-alt);font-size:0.72rem;font-weight:700;color:var(--gold-dark);margin-bottom:5px">HUKUM & POLITIK</div>
+              <div style="font-family:var(--font-body);font-size:0.72rem;line-height:1.5;color:var(--ink)">Dualisme hukum · Birokrasi kolonial · Struktur administrasi wilayah</div>
+            </div>
+            <div style="border:1px solid var(--gold-dark); padding:10px; background:rgba(212,196,160,0.25); text-align:center">
+              <div style="font-family:var(--font-alt);font-size:0.72rem;font-weight:700;color:var(--gold-dark);margin-bottom:5px">SOSIAL-BUDAYA</div>
+              <div style="font-family:var(--font-body);font-size:0.72rem;line-height:1.5;color:var(--ink)">Bahasa Betawi · Keroncong · Kuliner · Arsitektur kota · Identitas Indo</div>
+            </div>
+          </div>
+        </div>
+        <div class="refleksi-box" style="margin-top:14px">
+          <div class="refleksi-title">⚖️ Refleksi Penutup Bab 5</div>
+          <p>VOC adalah cermin yang memantulkan wajah dunia modern: korporasi transnasional yang lebih kuat dari negara, eksploitasi yang dilegitimasi dengan hukum, korupsi yang dibiarkan karena menguntungkan yang berkuasa. Apakah kita benar-benar sudah melampaui era VOC — atau hanya mengubah nama-namanya?</p>
+        </div>
+      </div>
+      <div class="page-num">62</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 63 — SOAL AKM COVER ══ -->
+    <div class="page" data-page="63">
+      <div class="page-inner bab-cover">
+        <div class="bab-ornament">❖ ❖ ❖</div>
+        <div class="bab-num">ASESMEN</div>
+        <div class="bab-roman" style="font-size:3rem">AKM</div>
+        <div class="bab-rule"><span class="orn-rule-long"></span><span> ⚜ </span><span class="orn-rule-long"></span></div>
+        <h2 class="bab-title" style="font-size:1.5rem">SOAL ASESMEN<br/>KOMPETENSI MINIMUM</h2>
+        <div class="bab-sub"><em>Literasi & Numerasi Historis — 6 Stimulus</em></div>
+        <div class="bab-years">Halaman 63 — 68</div>
+        <div class="bab-goals">
+          <div class="bab-goals-title">Tentang AKM IVH:</div>
+          <p style="font-family:var(--font-body);font-size:0.8rem;line-height:1.6;color:var(--ink);text-align:left">Soal AKM dirancang untuk mengukur kemampuan literasi (membaca teks historis dan menganalisis argumen) dan numerasi (menginterpretasi data kuantitatif historis) pada tingkat perguruan tinggi. Setiap stimulus diikuti soal-soal bertingkat dari pemahaman dasar hingga analisis kritis.</p>
+        </div>
+        <div class="bab-quote">
+          <em>„Een goed historicus leest niet alleen feiten — hij leest ook wat er tussen de regels staat."</em>
+          <span>(Seorang sejarawan yang baik tidak hanya membaca fakta — ia membaca juga apa yang ada di antara baris-barisnya.)</span>
+        </div>
+      </div>
+      <div class="page-num">63</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 64 — AKM Stimulus 1 & 2 ══ -->
+    <div class="page" data-page="64">
+      <div class="page-inner">
+        <div class="chapter-label">Soal AKM — Literasi Historis</div>
+        <h2 class="section-heading">Stimulus 1 & 2 — Membaca Sumber Primer</h2>
+
+        <div class="akm-stimulus">
+          <div class="akm-stimulus-title">Stimulus 1: Kutipan Surat Jan Pieterszoon Coen kepada Heeren XVII, 1614</div>
+          <div class="akm-stimulus-body">
+            „Uw Edelen moeten weten dat de handel in Azië moet gedreven en bewaard worden onder de bescherming en met behulp van uw eigen wapenen, en de wapenen moeten betaald worden uit de winst van de handel."
+            <div style="font-size:0.72rem;color:var(--sepia-mid);margin-top:5px;font-style:normal">[Terjemahan: "Yang Mulia harus tahu bahwa perdagangan di Asia harus dijalankan dan dijaga di bawah perlindungan dan dengan bantuan senjata kalian sendiri, dan senjata-senjata itu harus dibayar dari keuntungan perdagangan."]</div>
+          </div>
+        </div>
+        <div class="akm-soal-group">
+          <div class="akm-soal-q">1a. Berdasarkan kutipan di atas, apakah hubungan antara perdagangan dan kekuatan militer menurut pandangan Coen?</div>
+          <div class="soal-opts">
+            <div class="opt" data-opt="A">A. Perdagangan dan militer adalah dua hal yang terpisah dan tidak saling membutuhkan.</div>
+            <div class="opt" data-opt="B">B. Militer lebih penting dari perdagangan sehingga harus dibiayai negara.</div>
+            <div class="opt" data-opt="C">C. Perdagangan dan militer saling bergantung — perdagangan membutuhkan perlindungan senjata, dan senjata dibiayai oleh perdagangan.</div>
+            <div class="opt" data-opt="D">D. Perdagangan dapat berlangsung damai tanpa campur tangan militer.</div>
+          </div>
+          <div class="akm-kunci hidden">✅ C — Coen secara eksplisit menyatakan hubungan saling bergantung (interdependensi) antara perdagangan dan militer dalam satu siklus yang tak terputus.</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">✅ C — Coen secara eksplisit menyatakan hubungan saling bergantung antara perdagangan dan militer dalam satu siklus yang tak terputus.</div>
+        </div>
+
+        <div class="akm-stimulus" style="margin-top:14px">
+          <div class="akm-stimulus-title">Stimulus 2: Perjanjian Bongaya, Pasal 1, 18 November 1667</div>
+          <div class="akm-stimulus-body">
+            „De Vorst van Gowa verbindt zich plechtig alle handel in specerijen en andere goederen die door de Compagnie gemonopoliseerd zijn, uitsluitend aan de Compagnie over te dragen, en verklaart alle andere handelaars van welke natie ook te weren uit zijn landen."
+            <div style="font-size:0.72rem;color:var(--sepia-mid);margin-top:5px;font-style:normal">[Raja Gowa mengikatkan diri secara khidmat menyerahkan seluruh perdagangan rempah dan barang yang dimonopoli Kompeni secara eksklusif kepada Kompeni, dan menyatakan mengusir semua pedagang dari bangsa mana pun dari wilayahnya.]</div>
+          </div>
+        </div>
+        <div class="akm-soal-group">
+          <div class="akm-soal-q">2a. Apa konsekuensi langsung dari pasal ini bagi pedagang Arab, Melayu, dan Tionghoa yang selama ini berdagang di Makassar?</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">Kunci: Mereka harus meninggalkan Makassar atau berdagang secara ilegal. Makassar yang sebelumnya menjadi <em>vrijhaven</em> (pelabuhan bebas) kini menjadi zona monopoli eksklusif VOC. Jaringan perdagangan bebas Asia yang sudah berabad-abad terbentuk runtuh dalam satu klausa perjanjian.</div>
+          <div class="akm-soal-q" style="margin-top:8px">2b. Apakah perjanjian yang ditandatangani di bawah tekanan militer dapat disebut "perjanjian yang sah"? Gunakan minimal satu prinsip hukum internasional modern dalam jawabanmu.</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">Kunci: Dalam hukum perjanjian modern (<em>Konvensi Wina 1969</em>), perjanjian yang diperoleh melalui paksaan (<em>coercion</em>) terhadap negara dapat dinyatakan batal. Sultan Hasanuddin menandatangani Bongaya setelah kekalahan militer — ini masuk kategori paksaan. Argumen kontra: hukum internasional modern tidak berlaku retroaktif; standar abad ke-17 berbeda.</div>
+        </div>
+      </div>
+      <div class="page-num">64</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 65 — AKM Stimulus 3 & 4 ══ -->
+    <div class="page" data-page="65">
+      <div class="page-inner">
+        <div class="chapter-label">Soal AKM — Numerasi Historis</div>
+        <h2 class="section-heading">Stimulus 3 & 4 — Membaca Data Kuantitatif</h2>
+
+        <div class="akm-stimulus">
+          <div class="akm-stimulus-title">Stimulus 3: Tabel Hutang & Pendapatan VOC 1700–1795</div>
+          <div class="akm-stimulus-body" style="font-style:normal">
+            <table class="data-table" style="font-size:0.72rem">
+              <thead><tr><th>Tahun</th><th>Hutang (jt f.)</th><th>Pendapatan (jt f.)</th><th>Rasio</th></tr></thead>
+              <tbody>
+                <tr><td>1700</td><td>7,5</td><td>12,0</td><td>0,6×</td></tr>
+                <tr><td>1740</td><td>28,0</td><td>10,8</td><td>2,6×</td></tr>
+                <tr><td>1780</td><td>110,0</td><td>8,2</td><td>13,4×</td></tr>
+                <tr><td>1795</td><td>134,0</td><td>6,1</td><td>21,9×</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="akm-soal-group">
+          <div class="akm-soal-q">3a. Hitunglah: berapa persen pertumbuhan hutang VOC antara tahun 1700 dan 1795?</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">Kunci: (134 – 7,5) / 7,5 × 100% = 126,5 / 7,5 × 100% = <strong>1.686,7%</strong> (lebih dari 17× lipat dalam 95 tahun).</div>
+          <div class="akm-soal-q" style="margin-top:8px">3b. Jika VOC perlu melunasi seluruh hutangnya pada 1795 hanya dari pendapatan tahunan tanpa mengambil hutang baru, berapa tahun yang dibutuhkan?</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">Kunci: 134 juta ÷ 6,1 juta/tahun = <strong>≈21,97 tahun</strong> — hampir 22 tahun, itupun jika SELURUH pendapatan digunakan hanya untuk membayar hutang tanpa pengeluaran operasional sama sekali. Secara praktis: mustahil.</div>
+        </div>
+
+        <div class="akm-stimulus" style="margin-top:14px">
+          <div class="akm-stimulus-title">Stimulus 4: Data Harga & Keuntungan Rempah VOC circa 1660</div>
+          <div class="akm-stimulus-body" style="font-style:normal;font-size:0.78rem">
+            Cengkeh: dibeli di Ambon f.0,15/pond → dijual di Amsterdam f.7,50/pond.<br/>
+            Pala: dibeli di Banda f.0,20/pond → dijual di Amsterdam f.10,00/pond.<br/>
+            Biaya pengiriman per ekspedisi (kapal + awak + asuransi): rata-rata f.18.000,–<br/>
+            Muatan tipikal satu <em>retourschip</em>: 250.000 pond rempah campuran (60% cengkeh, 40% pala).
+          </div>
+        </div>
+        <div class="akm-soal-group">
+          <div class="akm-soal-q">4a. Hitunglah keuntungan bersih satu ekspedisi retourschip berdasarkan data di atas. Tunjukkan langkah perhitunganmu.</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">
+            Muatan: 150.000 pond cengkeh + 100.000 pond pala.<br/>
+            Modal beli: (150.000 × 0,15) + (100.000 × 0,20) = 22.500 + 20.000 = <strong>f.42.500</strong><br/>
+            Hasil jual: (150.000 × 7,50) + (100.000 × 10,00) = 1.125.000 + 1.000.000 = <strong>f.2.125.000</strong><br/>
+            Biaya pengiriman: f.18.000<br/>
+            <strong>Keuntungan bersih: f.2.125.000 – f.42.500 – f.18.000 = f.2.064.500</strong><br/>
+            Margin: 2.064.500 / (42.500+18.000) × 100% = <strong>≈3.412%</strong>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">65</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 66 — AKM Stimulus 5 & 6 ══ -->
+    <div class="page" data-page="66">
+      <div class="page-inner">
+        <div class="chapter-label">Soal AKM — Analisis Kritis</div>
+        <h2 class="section-heading">Stimulus 5 & 6 — Analisis Argumen & Perspektif</h2>
+
+        <div class="akm-stimulus">
+          <div class="akm-stimulus-title">Stimulus 5: Dua Perspektif tentang VOC</div>
+          <div class="akm-stimulus-body">
+            <strong>Perspektif A (Sejarawan Belanda, 1880):</strong> "VOC adalah pencapaian terbesar peradaban Barat — sebuah bukti bahwa akal budi, organisasi, dan ketekunan manusia dapat menaklukkan samudra, jarak, dan hambatan alam. Ia menciptakan kemakmuran, membawa perdagangan dunia ke tatanan baru, dan meletakkan fondasi bagi Indonesia modern."
+            <br/><br/>
+            <strong>Perspektif B (Sejarawan Indonesia, 1920):</strong> "VOC bukan pencapaian peradaban. Ia adalah mesin eksploitasi yang dibangun di atas tulang-belulang Bandanese, penderitaan petani Priangan, dan darah para pedagang Makassar. Kemakmuran Belanda adalah kemiskinan Nusantara yang disulih nama."
+          </div>
+        </div>
+        <div class="akm-soal-group">
+          <div class="akm-soal-q">5a. Identifikasikan masing-masing satu klaim faktual dan satu klaim nilai (normative claim) dari setiap perspektif di atas.</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">
+            <strong>Perspektif A:</strong> Klaim faktual — "VOC menciptakan perdagangan dunia ke tatanan baru" (dapat diverifikasi). Klaim nilai — "ini adalah pencapaian terbesar peradaban Barat" (penilaian subjektif).<br/>
+            <strong>Perspektif B:</strong> Klaim faktual — "kemakmuran Belanda dibangun di atas penderitaan Nusantara" (dapat didukung data). Klaim nilai — "VOC bukan pencapaian peradaban" (penilaian normatif berdasarkan sistem nilai tertentu).
+          </div>
+          <div class="akm-soal-q" style="margin-top:8px">5b. Apakah kedua perspektif ini dapat "keduanya benar sekaligus"? Jelaskan dalam 3-4 kalimat menggunakan konsep perspektif historis (<em>historical perspective-taking</em>).</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">Kunci: Ya, keduanya bisa benar sekaligus karena mengacu pada <em>kelompok yang berbeda</em>. Bagi pemegang saham Belanda dan sejarawan yang mengadopsi sudut pandang mereka, VOC memang menciptakan kemakmuran luar biasa. Bagi petani Priangan, penduduk Banda, atau komunitas Tionghoa Batavia, pengalaman historis mereka adalah eksploitasi dan penderitaan. Sejarah yang baik harus mampu menampung kedua perspektif ini tanpa mengurangi kebenaran salah satunya — inilah inti dari <em>historical perspective-taking</em>.</div>
+        </div>
+
+        <div class="akm-stimulus" style="margin-top:10px">
+          <div class="akm-stimulus-title">Stimulus 6: Paradoks Ethische Politiek</div>
+          <div class="akm-stimulus-body">
+            "Pendidikan yang diberikan oleh Ethische Politiek menghasilkan generasi terdidik pribumi yang membaca tulisan-tulisan tentang hak asasi manusia, kebebasan, dan persamaan — tulisan yang ditulis oleh orang Eropa, untuk orang Eropa. Mereka kemudian menerapkan prinsip-prinsip universal itu kepada situasi mereka sendiri dan sampai pada kesimpulan yang tidak pernah dimaksudkan oleh para pendidik kolonial mereka: bahwa penjajahan itu sendiri adalah pelanggaran terhadap prinsip-prinsip tersebut." — Prof. Benedict Anderson, 1983
+          </div>
+        </div>
+        <div class="akm-soal-group">
+          <div class="akm-soal-q">6a. Jelaskan "paradoks" yang dimaksud dalam kutipan Anderson di atas. Berikan satu contoh historis konkret dari Hindia Belanda yang mendukung argumennya.</div>
+          <button class="game-btn" style="margin-top:5px" onclick="this.nextElementSibling.classList.toggle('hidden')">👁 Kunci</button>
+          <div class="akm-kunci hidden">Paradoks: Sistem kolonial yang memberikan pendidikan "pencerahan Eropa" justru menciptakan alat intelektual untuk menghancurkan kolonialisme itu sendiri. Contoh: Para pendiri Budi Utomo (1908) adalah lulusan STOVIA yang membaca filsafat Rousseau dan Mill di perpustakaan Belanda, kemudian menggunakannya untuk mempertanyakan legitimasi kekuasaan kolonial. Suwardi Suryaningrat menulis <em>"Als ik een Nederlander was"</em> (1913) — memakai logika liberal Belanda untuk mengkritik kebijakan Belanda sendiri.</div>
+        </div>
+      </div>
+      <div class="page-num">66</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 67 — AKM Kunci Lengkap & Rubrik ══ -->
+    <div class="page" data-page="67">
+      <div class="page-inner">
+        <div class="chapter-label">Soal AKM — Kunci & Rubrik Penilaian</div>
+        <h2 class="section-heading">Kunci Lengkap & Rubrik Penilaian AKM</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">Catatan untuk Prefect</span>
+            <span class="diary-loc">Ruang Tuchtraad IVH — Batavia</span>
+          </div>
+          <p class="diary-body">Rubrik berikut digunakan untuk menilai jawaban esai pada soal AKM. Penilaian soal pilihan ganda bersifat otomatis (benar/salah). Untuk esai, gunakan rubrik empat dimensi berikut.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table rubrik-table">
+            <caption>Rubrik Penilaian Esai AKM — IVH 1926</caption>
+            <thead>
+              <tr><th>Dimensi</th><th>Sangat Baik (4)</th><th>Baik (3)</th><th>Cukup (2)</th><th>Kurang (1)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Pemahaman Konsep</strong></td><td>Konsep historis digunakan tepat dan akurat</td><td>Konsep digunakan dengan sedikit kesalahan</td><td>Konsep sebagian dipahami, ada kesalahan substansial</td><td>Konsep tidak dipahami atau salah total</td></tr>
+              <tr><td><strong>Penggunaan Bukti</strong></td><td>Minimal 2 bukti spesifik, relevan, akurat</td><td>1 bukti spesifik yang relevan</td><td>Bukti ada tapi tidak spesifik atau tidak relevan</td><td>Tidak ada bukti</td></tr>
+              <tr><td><strong>Argumen</strong></td><td>Argumen koheren, logis, tidak ada kontradiksi</td><td>Argumen cukup koheren, 1-2 inkonsistensi</td><td>Argumen ada tapi tidak terstruktur</td><td>Tidak ada argumen yang jelas</td></tr>
+              <tr><td><strong>Perspektif Kritis</strong></td><td>Melihat lebih dari satu perspektif secara berimbang</td><td>Mengakui perspektif lain meski tidak dikembangkan</td><td>Hanya satu perspektif tanpa kesadaran lain</td><td>Perspektif tidak ada atau bias ekstrem</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="body-text">
+          <h4>Konversi Skor:</h4>
+          <ul class="styled-ul">
+            <li>Skor maksimal per soal esai: 16 poin (4 dimensi × 4 poin)</li>
+            <li>Soal PG: 1 poin per jawaban benar</li>
+            <li>Total AKM (6 stimulus, campuran PG + esai): 100 poin</li>
+            <li>Nilai ≥85: Sangat Kompeten · 70–84: Kompeten · 55–69: Cukup Kompeten · &lt;55: Perlu Intervensi</li>
+          </ul>
+        </div>
+        <div class="tahukah-box">
+          <div class="tk-title">💡 Catatan Metodologi</div>
+          <p>Soal AKM ini dirancang mengacu pada kerangka PISA 2022 untuk literasi membaca dan numerasi, disesuaikan dengan konteks sejarah VOC dan tingkat universitas. Pertanyaan dikalibrasi pada level <em>Bloom's Taxonomy</em> tingkat 4–6 (analisis, evaluasi, kreasi).</p>
+        </div>
+      </div>
+      <div class="page-num">67</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 68 — GAME: Jodohkan Perjanjian ══ -->
+    <div class="page" data-page="68">
+      <div class="page-inner">
+        <div class="chapter-label">🎮 Permainan Penutup — Jodohkan</div>
+        <h2 class="section-heading">Jodohkan: Peristiwa & Tahunnya</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">Setiap akhir semester</span>
+            <span class="diary-loc">Aula Besar IVH — sesi kuis penutup</span>
+          </div>
+          <p class="diary-body">Prefect mengumumkan: <em>„Permainan terakhir semester ini. Siapa yang bisa menjodohkan semua peristiwa dengan tahun dan tokohnya dengan benar dalam waktu tercepat, dapat dibebaskan dari satu soal esai ujian."</em> Tentu saja semua orang langsung semangat.</p>
+        </div>
+        <div id="game-jodohkan">
+          <div class="game-score-bar">
+            <span>Pasangan benar: <strong id="jodo-score">0</strong>/8</span>
+            <button class="game-btn" id="jodo-reset">↺ Ulang</button>
+          </div>
+          <div class="match-grid" id="jodo-grid">
+            <!-- JS fills -->
+          </div>
+          <div id="jodo-result" class="tbt-feedback hidden" style="margin-top:10px"></div>
+        </div>
+      </div>
+      <div class="page-num">68</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 69 — Timeline Visual VOC ══ -->
+    <div class="page" data-page="69">
+      <div class="page-inner">
+        <div class="chapter-label">Ringkasan Visual</div>
+        <h2 class="section-heading">Timeline Lengkap VOC 1594–1924</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">1 Januari 1926 — halaman terakhir sebelum lampiran</span>
+            <span class="diary-loc">Kantor Tim Tuchtraad IVH</span>
+          </div>
+          <p class="diary-body">Kami menyajikan di sini garis besar perjalanan VOC dalam satu halaman — karena sejarah yang baik, seperti peta yang baik, harus bisa dilihat dari jauh sekaligus bisa didekati untuk detail. Gunakan timeline ini sebagai peta konsep final sebelum ujian.</p>
+        </div>
+        <div class="visual-timeline">
+          <div class="vt-item"><div class="vt-year">1453</div><div class="vt-event">Konstantinopel jatuh ke Turki Usmani — jalur rempah darat tertutup bagi Eropa</div></div>
+          <div class="vt-item"><div class="vt-year">1511</div><div class="vt-event">Portugis merebut Malaka — mulai mendominasi jalur rempah Asia Tenggara</div></div>
+          <div class="vt-item"><div class="vt-year">1596</div><div class="vt-event">Ekspedisi Cornelis de Houtman tiba di Banten — ekspedisi Belanda pertama ke Nusantara</div></div>
+          <div class="vt-item"><div class="vt-year">1602</div><div class="vt-event"><strong>VOC berdiri</strong> — 20 Maret, enam kamar bergabung, modal awal f.6,4 juta, Octrooi dari Staten-Generaal</div></div>
+          <div class="vt-item"><div class="vt-year">1605</div><div class="vt-event">VOC merebut Amboina dari Portugis — awal dominasi Maluku</div></div>
+          <div class="vt-item"><div class="vt-year">1619</div><div class="vt-event">J.P. Coen mendirikan <strong>Batavia</strong> di atas reruntuhan Jayakarta — ibukota VOC di Hindia</div></div>
+          <div class="vt-item"><div class="vt-year">1621</div><div class="vt-event">Pembantaian Banda — 13.000–15.000 jiwa Bandanese tewas demi monopoli pala</div></div>
+          <div class="vt-item"><div class="vt-year">1628–29</div><div class="vt-event">Sultan Agung menyerang Batavia dua kali — gagal keduanya; VOC bertahan</div></div>
+          <div class="vt-item"><div class="vt-year">1641</div><div class="vt-event">VOC merebut Malaka dari Portugis — menguasai selat perdagangan terpenting Asia</div></div>
+          <div class="vt-item"><div class="vt-year">1667</div><div class="vt-event">Perjanjian Bongaya — Makassar takluk; Sultan Hasanuddin menyerah kepada Speelman</div></div>
+          <div class="vt-item"><div class="vt-year">1670</div><div class="vt-event">Puncak kejayaan VOC — dividen 40–75%, nilai korporasi tertinggi dalam sejarah manusia</div></div>
+          <div class="vt-item"><div class="vt-year">1691</div><div class="vt-event">VOC mencatat defisit pertama — titik balik yang tidak pernah berbalik</div></div>
+          <div class="vt-item"><div class="vt-year">1740</div><div class="vt-event">Pembantaian Cina Batavia — 5.000–10.000 orang Tionghoa tewas</div></div>
+          <div class="vt-item"><div class="vt-year">1755</div><div class="vt-event">Perjanjian Giyanti — Mataram dipecah menjadi Yogyakarta & Surakarta; desain VOC</div></div>
+          <div class="vt-item"><div class="vt-year">1780–84</div><div class="vt-event">Perang Inggris-Belanda IV — VOC kehilangan f.43 juta, pukulan fatal terakhir</div></div>
+          <div class="vt-item"><div class="vt-year">1795</div><div class="vt-event">Bataafse Republiek mengambil alih — Heeren XVII dibubarkan, hutang VOC diakuisisi negara</div></div>
+          <div class="vt-item"><div class="vt-year">1799</div><div class="vt-event"><strong>VOC bubar</strong> — 31 Desember, Octrooi terakhir habis; hutang warisan f.134 juta</div></div>
+          <div class="vt-item"><div class="vt-year">1830</div><div class="vt-event">Cultuurstelsel — warisan semangat VOC dalam pakaian negara modern</div></div>
+          <div class="vt-item"><div class="vt-year">1901</div><div class="vt-event">Ethische Politiek — paradoks: pendidikan kolonial melahirkan gerakan kemerdekaan</div></div>
+          <div class="vt-item"><div class="vt-year">1908</div><div class="vt-event">Budi Utomo — anak-anak warisan VOC mulai mempertanyakan sistem yang menciptakan mereka</div></div>
+          <div class="vt-item"><div class="vt-year">1924</div><div class="vt-event">Tahun penerbitan boek ini — VOC sudah mati 125 tahun, tapi jejaknya masih di mana-mana</div></div>
+        </div>
+      </div>
+      <div class="page-num">69</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 70 — PROJEK P5 COVER ══ -->
+    <div class="page" data-page="70">
+      <div class="page-inner bab-cover">
+        <div class="bab-ornament">❖ ❖ ❖</div>
+        <div class="bab-num">PROJEK P5</div>
+        <div class="bab-roman" style="font-size:2.5rem">P5</div>
+        <div class="bab-rule"><span class="orn-rule-long"></span><span> ⚜ </span><span class="orn-rule-long"></span></div>
+        <h2 class="bab-title" style="font-size:1.6rem">SIDANG DEWAN 17</h2>
+        <div class="bab-sub"><em>Simulasi Sidang Heeren XVII — Anno 1688</em></div>
+        <div class="bab-years">Panduan Lengkap Fasilitator</div>
+        <div class="bab-painting">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/VOC_Bond_1623.jpg/800px-VOC_Bond_1623.jpg" alt="Dokumen VOC" onerror="this.style.display='none'"/>
+          <div class="painting-caption">Dokumen obligasi VOC 1623 — contoh sumber primer yang digunakan dalam Projek P5.</div>
+        </div>
+        <div class="bab-goals">
+          <div class="bab-goals-title">Tujuan Projek P5:</div>
+          <ol>
+            <li>Mengembangkan kemampuan argumentasi berbasis sumber primer historis.</li>
+            <li>Melatih empati historis melalui pengambilan peran yang berbeda perspektifnya.</li>
+            <li>Membangun kemampuan kolaborasi dan negosiasi dalam konteks simulasi akademik.</li>
+            <li>Menghasilkan karya berupa naskah sidang yang dapat dipertanggungjawabkan secara historis.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="page-num">70</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 71 — P5 Panduan Detail ══ -->
+    <div class="page" data-page="71">
+      <div class="page-inner">
+        <div class="chapter-label">Projek P5 — Sidang Dewan 17</div>
+        <h2 class="section-heading">Panduan Fasilitator — Full Detail</h2>
+
+        <div class="p5-section">
+          <div class="p5-section-title">📋 Skenario Sidang</div>
+          <div class="body-text">
+            <p><strong>Setting:</strong> Amsterdam, 14 Juni 1688. Heeren XVII mengadakan sidang luar biasa (<span class="nl" data-tip="Sidang luar biasa / darurat">buitengewone vergadering</span>) untuk membahas laporan mengkhawatirkan dari Batavia: korupsi merajalela, hutang membengkak, dan beberapa pos dagang di Maluku dilaporkan defisit. Di sisi lain, sekelompok pemegang saham menuntut kenaikan dividen.</p>
+            <p>Setiap peserta mengambil salah satu peran di bawah dan menyampaikan argumen dari perspektif perannya berdasarkan fakta historis yang autentik.</p>
+          </div>
+        </div>
+
+        <div class="p5-section">
+          <div class="p5-section-title">🎭 Peran-Peran dalam Sidang</div>
+          <div class="p5-role-grid">
+            <div class="p5-role-card">
+              <div class="p5-role-name">Ketua Heeren XVII</div>
+              <div class="p5-role-desc">Memimpin jalannya sidang. Harus mempertimbangkan semua perspektif sebelum mengambil keputusan akhir. Diisi oleh bewoner paling senior atau prefect.</div>
+            </div>
+            <div class="p5-role-card">
+              <div class="p5-role-name">Komisaris Amsterdam</div>
+              <div class="p5-role-desc">Mewakili kepentingan pemegang saham Amsterdam (50% modal). Menuntut efisiensi dan kenaikan dividen. Cenderung memilih ekspansi agresif.</div>
+            </div>
+            <div class="p5-role-card">
+              <div class="p5-role-name">Gouverneur-Generaal Batavia</div>
+              <div class="p5-role-desc">Melaporkan kondisi lapangan: korupsi, penyakit, kekurangan tenaga, tekanan dari kerajaan lokal. Meminta lebih banyak sumber daya dan reformasi gaji.</div>
+            </div>
+            <div class="p5-role-card">
+              <div class="p5-role-name">Perwakilan Petani Priangan</div>
+              <div class="p5-role-desc">Menyuarakan penderitaan petani kopi yang dijual dengan harga paksa. Menuntut harga yang adil atau penghapusan kewajiban tanam.</div>
+            </div>
+            <div class="p5-role-card">
+              <div class="p5-role-name">Jurnalis / Penulis Pamflet</div>
+              <div class="p5-role-desc">Mengamati sidang dan akan mempublikasikan laporan kepada publik Amsterdam. Mengajukan pertanyaan kritis kepada semua pihak.</div>
+            </div>
+            <div class="p5-role-card">
+              <div class="p5-role-name">Perwakilan Komunitas Tionghoa Batavia</div>
+              <div class="p5-role-desc">Menyuarakan ketidakamanan komunitas pasca-intimidasi dan ancaman pengusiran. Menuntut perlindungan hukum yang setara.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">71</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 72 — P5 Timeline & Rubrik ══ -->
+    <div class="page" data-page="72">
+      <div class="page-inner">
+        <div class="chapter-label">Projek P5 — Sidang Dewan 17</div>
+        <h2 class="section-heading">Timeline Pelaksanaan & Rubrik Penilaian</h2>
+
+        <div class="p5-section">
+          <div class="p5-section-title">📅 Timeline Pelaksanaan (3 Pertemuan × 90 Menit)</div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Pertemuan</th><th>Durasi</th><th>Kegiatan</th><th>Output</th></tr></thead>
+              <tbody>
+                <tr><td>1 — Persiapan</td><td>90 mnt</td><td>Pembagian peran, riset sumber primer, penyusunan naskah argumen awal</td><td>Naskah argumen awal per peran (min. 300 kata)</td></tr>
+                <tr><td>2 — Sidang</td><td>90 mnt</td><td>Simulasi sidang: pembukaan (15'), argumen per peran (5'/peran), debat terbuka (30'), keputusan sidang (15'), refleksi (15')</td><td>Rekaman/notulen sidang + keputusan bersama</td></tr>
+                <tr><td>3 — Refleksi</td><td>90 mnt</td><td>Debrief: bandingkan keputusan sidang dengan fakta historis; esai refleksi individual</td><td>Esai refleksi 500–700 kata per bewoner</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="p5-section" style="margin-top:14px">
+          <div class="p5-section-title">📊 Rubrik Penilaian Projek P5</div>
+          <div class="table-wrap">
+            <table class="data-table rubrik-table">
+              <thead>
+                <tr><th>Aspek</th><th>Bobot</th><th>Sangat Baik (A)</th><th>Baik (B)</th><th>Cukup (C)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Akurasi Historis</td><td>30%</td><td>Semua klaim berbasis fakta historis yang dapat diverifikasi, min. 3 sumber</td><td>Mayoritas klaim akurat, 2 sumber</td><td>Beberapa kesalahan faktual, 1 sumber</td></tr>
+                <tr><td>Kualitas Argumen</td><td>25%</td><td>Argumen koheren, logis, antisipatif terhadap sanggahan</td><td>Argumen cukup koheren, ada 1-2 inkonsistensi</td><td>Argumen ada tapi lemah strukturnya</td></tr>
+                <tr><td>Empati Historis</td><td>20%</td><td>Sangat berhasil menghidupkan perspektif peran, bukan perspektif sendiri</td><td>Cukup berhasil mengadopsi perspektif peran</td><td>Perspektif peran kurang terasa, dominan perspektif pribadi</td></tr>
+                <tr><td>Kolaborasi</td><td>15%</td><td>Aktif merespons argumen kelompok lain secara konstruktif</td><td>Cukup aktif, sesekali merespons</td><td>Kurang aktif, cenderung monolog</td></tr>
+                <tr><td>Esai Refleksi</td><td>10%</td><td>Menunjukkan perubahan pemahaman yang substantif pasca-simulasi</td><td>Refleksi cukup bermakna</td><td>Refleksi dangkal atau deskriptif saja</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">72</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 73 — Indeks A-Z (Bagian 1) ══ -->
+    <div class="page" data-page="73">
+      <div class="page-inner">
+        <div class="chapter-label">Lampiran — Indeks</div>
+        <h2 class="section-heading">Indeks A–Z — <em>Register der Termen</em></h2>
+        <div class="indeks-grid">
+          <div>
+            <div class="indeks-letter">A</div>
+            <div class="indeks-item"><span>Aandelen <span class="indeks-nl">(saham)</span></span><span class="indeks-page">10, 13</span></div>
+            <div class="indeks-item"><span>Adatrecht <span class="indeks-nl">(hukum adat)</span></span><span class="indeks-page">55</span></div>
+            <div class="indeks-item"><span>Amboina Massacre (1623)</span><span class="indeks-page">15</span></div>
+            <div class="indeks-item"><span>Arung Palakka</span><span class="indeks-page">37</span></div>
+            <div class="indeks-item"><span>Auteursrecht <span class="indeks-nl">(hak cipta)</span></span><span class="indeks-page">2</span></div>
+            <div class="indeks-letter">B</div>
+            <div class="indeks-item"><span>Bakker <span class="indeks-nl">(tukang roti)</span></span><span class="indeks-page">13</span></div>
+            <div class="indeks-item"><span>Banda, Kepulauan</span><span class="indeks-page">16, 33</span></div>
+            <div class="indeks-item"><span>Batavia, Pendirian</span><span class="indeks-page">21–22</span></div>
+            <div class="indeks-item"><span>Bataafse Republiek</span><span class="indeks-page">46, 49</span></div>
+            <div class="indeks-item"><span>Bewoner <span class="indeks-nl">(mahasiswa IVH)</span></span><span class="indeks-page">4</span></div>
+            <div class="indeks-item"><span>Bongaya, Perjanjian (1667)</span><span class="indeks-page">37, 64</span></div>
+            <div class="indeks-item"><span>Budi Utomo (1908)</span><span class="indeks-page">56, 58, 69</span></div>
+            <div class="indeks-letter">C</div>
+            <div class="indeks-item"><span>Coen, Jan Pieterszoon</span><span class="indeks-page">17, 19, 21, 33</span></div>
+            <div class="indeks-item"><span>Corruptie <span class="indeks-nl">(korupsi)</span></span><span class="indeks-page">44, 48</span></div>
+            <div class="indeks-item"><span>Cultuurstelsel <span class="indeks-nl">(Tanam Paksa)</span></span><span class="indeks-page">51, 52</span></div>
+            <div class="indeks-letter">D</div>
+            <div class="indeks-item"><span>Daendels, H.W.</span><span class="indeks-page">51</span></div>
+            <div class="indeks-item"><span>De Houtman, Cornelis</span><span class="indeks-page">10</span></div>
+            <div class="indeks-item"><span>Divide et Impera</span><span class="indeks-page">34, 37</span></div>
+            <div class="indeks-letter">E</div>
+            <div class="indeks-item"><span>EIC (English East India Co.)</span><span class="indeks-page">15, 46</span></div>
+            <div class="indeks-item"><span>Erfpacht <span class="indeks-nl">(hak guna usaha)</span></span><span class="indeks-page">33, 57</span></div>
+            <div class="indeks-item"><span>Ethische Politiek (1901)</span><span class="indeks-page">56, 58, 66</span></div>
+            <div class="indeks-item"><span>Extirpatie <span class="indeks-nl">(pemusnahan tanaman)</span></span><span class="indeks-page">34</span></div>
+          </div>
+          <div>
+            <div class="indeks-letter">G</div>
+            <div class="indeks-item"><span>Gedwongen Arbeid <span class="indeks-nl">(kerja paksa)</span></span><span class="indeks-page">21</span></div>
+            <div class="indeks-item"><span>Giyanti, Perjanjian (1755)</span><span class="indeks-page">39, 69</span></div>
+            <div class="indeks-item"><span>Gouden Eeuw <span class="indeks-nl">(Abad Emas)</span></span><span class="indeks-page">43</span></div>
+            <div class="indeks-item"><span>Gouverneur-Generaal</span><span class="indeks-page">3, 22, 24</span></div>
+            <div class="indeks-item"><span>Grachten <span class="indeks-nl">(kanal kota)</span></span><span class="indeks-page">21</span></div>
+            <div class="indeks-item"><span>Grote Postweg <span class="indeks-nl">(Jalan Raya Pos)</span></span><span class="indeks-page">51</span></div>
+            <div class="indeks-letter">H</div>
+            <div class="indeks-item"><span>Hasanuddin, Sultan</span><span class="indeks-page">37</span></div>
+            <div class="indeks-item"><span>Heeren XVII</span><span class="indeks-page">12, 23</span></div>
+            <div class="indeks-item"><span>Herendienst <span class="indeks-nl">(rodi / kerja paksa)</span></span><span class="indeks-page">51</span></div>
+            <div class="indeks-item"><span>Hongi Tochten</span><span class="indeks-page">34, 41</span></div>
+            <div class="indeks-item"><span>Huurlingen <span class="indeks-nl">(tentara bayaran)</span></span><span class="indeks-page">16</span></div>
+            <div class="indeks-letter">J</div>
+            <div class="indeks-item"><span>Jayakarta, Penaklukan (1619)</span><span class="indeks-page">21</span></div>
+            <div class="indeks-letter">K</div>
+            <div class="indeks-item"><span>Kamer <span class="indeks-nl">(divisi/kamar VOC)</span></span><span class="indeks-page">12</span></div>
+            <div class="indeks-item"><span>Kasteel van Batavia</span><span class="indeks-page">22, 25</span></div>
+            <div class="indeks-item"><span>Knevelarij <span class="indeks-nl">(pemerasan)</span></span><span class="indeks-page">44</span></div>
+            <div class="indeks-item"><span>Kora-kora <span class="indeks-nl">(perahu perang Maluku)</span></span><span class="indeks-page">34</span></div>
+            <div class="indeks-item"><span>Koningsplein <span class="indeks-nl">(lapangan raja, kini Monas)</span></span><span class="indeks-page">29</span></div>
+            <div class="indeks-letter">L</div>
+            <div class="indeks-item"><span>Landrente <span class="indeks-nl">(sewa/pajak tanah)</span></span><span class="indeks-page">51</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">73</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 74 — Indeks A-Z (Bagian 2) ══ -->
+    <div class="page" data-page="74">
+      <div class="page-inner">
+        <div class="chapter-label">Lampiran — Indeks (lanjutan)</div>
+        <h2 class="section-heading">Indeks A–Z — Lanjutan M–Z</h2>
+        <div class="indeks-grid">
+          <div>
+            <div class="indeks-letter">M</div>
+            <div class="indeks-item"><span>Maetsuyker, Joan (GG ke-16)</span><span class="indeks-page">24</span></div>
+            <div class="indeks-item"><span>Makassar, Perang (1666–67)</span><span class="indeks-page">37</span></div>
+            <div class="indeks-item"><span>Malaka, Perebutan (1641)</span><span class="indeks-page">15, 69</span></div>
+            <div class="indeks-item"><span>Mardijker <span class="indeks-nl">(bekas budak yang dimerdekakan)</span></span><span class="indeks-page">26, 61</span></div>
+            <div class="indeks-item"><span>Mataram, Serangan ke Batavia</span><span class="indeks-page">25, 36</span></div>
+            <div class="indeks-item"><span>Mossel, Jacob (GG ke-36)</span><span class="indeks-page">24, 48</span></div>
+            <div class="indeks-item"><span>Munten <span class="indeks-nl">(mata uang VOC)</span></span><span class="indeks-page">11</span></div>
+            <div class="indeks-letter">N</div>
+            <div class="indeks-item"><span>Naamloze Vennootschap <span class="indeks-nl">(perseroan terbatas)</span></span><span class="indeks-page">10</span></div>
+            <div class="indeks-item"><span>Nationaal Archief Den Haag</span><span class="indeks-page">7, 45</span></div>
+            <div class="indeks-letter">O</div>
+            <div class="indeks-item"><span>Octrooi <span class="indeks-nl">(hak monopoli eksklusif)</span></span><span class="indeks-page">11, 49</span></div>
+            <div class="indeks-item"><span>Oldenbarnevelt, Johan van</span><span class="indeks-page">10</span></div>
+            <div class="indeks-item"><span>Ommelanden <span class="indeks-nl">(wilayah sekitar Batavia)</span></span><span class="indeks-page">26, 27</span></div>
+            <div class="indeks-item"><span>Onderkoopman <span class="indeks-nl">(pedagang junior VOC)</span></span><span class="indeks-page">17, 44</span></div>
+            <div class="indeks-item"><span>Onderneming <span class="indeks-nl">(perkebunan besar)</span></span><span class="indeks-page">57</span></div>
+            <div class="indeks-letter">P</div>
+            <div class="indeks-item"><span>Particuliere Handel <span class="indeks-nl">(dagang pribadi ilegal)</span></span><span class="indeks-page">44</span></div>
+            <div class="indeks-item"><span>Pembantaian Banda (1621)</span><span class="indeks-page">33</span></div>
+            <div class="indeks-item"><span>Pembantaian Cina (1740)</span><span class="indeks-page">27</span></div>
+            <div class="indeks-item"><span>Perkeniers <span class="indeks-nl">(petani pemegang konsesi Banda)</span></span><span class="indeks-page">33</span></div>
+            <div class="indeks-item"><span>Preanger Stelsel (Sistem Priangan)</span><span class="indeks-page">35</span></div>
+            <div class="indeks-item"><span>Prefect <span class="indeks-nl">(pengajar/fasilitator IVH)</span></span><span class="indeks-page">4, 5</span></div>
+          </div>
+          <div>
+            <div class="indeks-letter">R</div>
+            <div class="indeks-item"><span>Raad van Indië <span class="indeks-nl">(Dewan Hindia)</span></span><span class="indeks-page">12</span></div>
+            <div class="indeks-item"><span>Raad van Justitie <span class="indeks-nl">(Dewan Kehakiman)</span></span><span class="indeks-page">28</span></div>
+            <div class="indeks-item"><span>Raffles, Thomas Stamford</span><span class="indeks-page">51</span></div>
+            <div class="indeks-item"><span>Regent <span class="indeks-nl">(bupati/penguasa lokal)</span></span><span class="indeks-page">35</span></div>
+            <div class="indeks-item"><span>Retourschip <span class="indeks-nl">(kapal kargo besar VOC)</span></span><span class="indeks-page">65</span></div>
+            <div class="indeks-item"><span>Rijke Heren <span class="indeks-nl">(pejabat kaya Batavia)</span></span><span class="indeks-page">29</span></div>
+            <div class="indeks-letter">S</div>
+            <div class="indeks-item"><span>Scheurbuik <span class="indeks-nl">(skorbut)</span></span><span class="indeks-page">14</span></div>
+            <div class="indeks-item"><span>Slavenhandel <span class="indeks-nl">(perdagangan budak)</span></span><span class="indeks-page">38</span></div>
+            <div class="indeks-item"><span>Smoor <span class="indeks-nl">(direbus perlahan — asal kata "semur")</span></span><span class="indeks-page">26, 61</span></div>
+            <div class="indeks-item"><span>Speelman, Cornelis</span><span class="indeks-page">37</span></div>
+            <div class="indeks-item"><span>Specerijen <span class="indeks-nl">(rempah-rempah)</span></span><span class="indeks-page">9</span></div>
+            <div class="indeks-item"><span>Stadhuis <span class="indeks-nl">(Balai Kota Batavia)</span></span><span class="indeks-page">22, 54</span></div>
+            <div class="indeks-item"><span>Staten-Generaal <span class="indeks-nl">(Parlemen Belanda)</span></span><span class="indeks-page">10, 11</span></div>
+            <div class="indeks-item"><span>Sultan Agung (Mataram)</span><span class="indeks-page">25, 36</span></div>
+            <div class="indeks-letter">T</div>
+            <div class="indeks-item"><span>Tuchtraad <span class="indeks-nl">(Dewan Disiplin IVH)</span></span><span class="indeks-page">2, 3</span></div>
+            <div class="indeks-letter">V</div>
+            <div class="indeks-item"><span>Valckenier, Adriaan (GG)</span><span class="indeks-page">27, 48</span></div>
+            <div class="indeks-item"><span>Vergaan Onder Corruptie</span><span class="indeks-page">42, 44</span></div>
+            <div class="indeks-item"><span>VOC (berdiri)</span><span class="indeks-page">10</span></div>
+            <div class="indeks-item"><span>VOC (bubar)</span><span class="indeks-page">49</span></div>
+            <div class="indeks-item"><span>Vrijhaven <span class="indeks-nl">(pelabuhan bebas)</span></span><span class="indeks-page">37</span></div>
+            <div class="indeks-letter">Z</div>
+            <div class="indeks-item"><span>Zuurkool <span class="indeks-nl">(kubis fermentasi, cegah skorbut)</span></span><span class="indeks-page">14</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">74</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 75 — Daftar Pustaka & Sumber ══ -->
+    <div class="page" data-page="75">
+      <div class="page-inner">
+        <div class="chapter-label">Lampiran — Sumber & Referensi</div>
+        <h2 class="section-heading">Daftar Pustaka & Sumber Primer</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">Catatan Tim Tuchtraad IVH</span>
+            <span class="diary-loc">Perpustakaan IVH — Weltevreden, Batavia</span>
+          </div>
+          <p class="diary-body">Seluruh fakta, angka, dan kutipan dalam boek ini dapat ditelusuri ke sumber-sumber primer yang tersedia di Nationaal Archief Den Haag, koleksi digital Rijksmuseum, dan perpustakaan Bataviaasch Genootschap. Bewoner didorong keras untuk mengakses sumber-sumber ini secara langsung — bukan hanya percaya pada boek ini.</p>
+        </div>
+        <div class="body-text">
+          <h4>Sumber Primer Utama:</h4>
+          <ul class="styled-ul">
+            <li><em>Generale Missiven van Gouverneurs-Generaal en Raden aan Heeren XVII der VOC</em> (1610–1795) — Nationaal Archief Den Haag, Inventaris 1.04.02</li>
+            <li><em>Daghregister gehouden int Casteel Batavia</em> (1624–1682) — sumber harian kehidupan Batavia VOC</li>
+            <li><em>Resolutiën van de Heeren XVII</em> (1602–1795) — keputusan-keputusan Heeren XVII</li>
+            <li><em>Koopmansboeken VOC</em> — catatan keuangan dan perdagangan VOC</li>
+            <li>Perjanjian Bongaya, 18 November 1667 — teks asli tersimpan di Nationaal Archief</li>
+          </ul>
+          <h4>Referensi Sekunder yang Disarankan:</h4>
+          <ul class="styled-ul">
+            <li>de Vries, Jan & van der Woude, Ad. <em>The First Modern Economy</em>. Cambridge University Press, 1997.</li>
+            <li>Gaastra, Femme S. <em>De Geschiedenis van de VOC</em>. Walburg Pers, Zutphen, 1991.</li>
+            <li>Ricklefs, M.C. <em>A History of Modern Indonesia</em>. Stanford University Press, 1993.</li>
+            <li>Vlekke, Bernard H.M. <em>Nusantara: A History of Indonesia</em>. W. van Hoeve, 1943.</li>
+            <li>Multatuli (E. Douwes Dekker). <em>Max Havelaar</em>. Amsterdam, 1860.</li>
+          </ul>
+          <h4>Arsip Digital yang Dapat Diakses:</h4>
+          <ul class="styled-ul">
+            <li><strong>Nationaal Archief</strong>: www.nationaalarchief.nl — koleksi digital VOC</li>
+            <li><strong>Rijksmuseum</strong>: www.rijksmuseum.nl — lukisan-lukisan era VOC</li>
+            <li><strong>Tropenmuseum</strong>: koleksi foto dan artefak Hindia Belanda</li>
+            <li><strong>KITLV Digital</strong>: www.kitlv.nl — foto-foto Hindia Belanda abad ke-19 hingga ke-20</li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-num">75</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 76 — Biodata Penulis ══ -->
+    <div class="page" data-page="76">
+      <div class="page-inner">
+        <div class="chapter-label">Lampiran — Biodata Penulis</div>
+        <h2 class="section-heading">Biodata Tim Tuchtraad IVH</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">1 Januari 1926 — Catatan Pengantar Tim</span>
+            <span class="diary-loc">Ruang Kerja Tim Tuchtraad, IVH Weltevreden</span>
+          </div>
+          <p class="diary-body">Boek ini adalah karya kolaboratif — tidak ada satu pena pun yang cukup untuk menuliskan 197 tahun sejarah sendirian. Tim Tuchtraad IVH terdiri dari para prefect, peneliti, dan pelajar senior yang seluruhnya percaya pada satu hal: bahwa sejarah adalah milik semua orang, bukan hanya milik sejarawan.</p>
+        </div>
+        <div class="bio-card">
+          <div class="bio-card-name">Prof. Dr. H. van der Decken</div>
+          <div class="bio-card-role">Rector Magnificus & Penanggung Jawab Akademik</div>
+          <div class="bio-card-body">Lahir di Utrecht, Belanda, 1866. Menempuh pendidikan di Universitas Leiden (Jurusan Sejarah Asia dan Hukum Kolonial). Tiba di Hindia Belanda 1895, bergabung dengan IVH sebagai prefect sejarah. Diangkat sebagai Rector Magnificus 1910. Penulis <em>Studie over de VOC en haar bestuursstelsel</em> (1918). Pensiun direncanakan 1928.</div>
+        </div>
+        <div class="bio-card">
+          <div class="bio-card-name">Mevr. A.J. Hartman-Kloos</div>
+          <div class="bio-card-role">Kepala Tuchtraad & Editor Utama</div>
+          <div class="bio-card-body">Lahir di Semarang, Hindia Belanda, 1884. Keturunan Indo-Belanda, menamatkan pendidikan tinggi di MULO Batavia kemudian melanjutkan ke Belanda (Universitas Amsterdam, Jurusan Sejarah). Kembali ke Hindia 1908. Berspesialisasi pada sejarah sosial Batavia dan kehidupan komunitas perempuan di era kolonial. Penerima penghargaan <em>Orde van Oranje-Nassau</em> 1922.</div>
+        </div>
+        <div class="bio-card">
+          <div class="bio-card-name">Drs. R. Soekardjo Prawiroatmodjo</div>
+          <div class="bio-card-role">Kontributor — Perspektif Jawa & Sumber Primer Berbahasa Jawa</div>
+          <div class="bio-card-body">Lahir di Yogyakarta, 1891. Lulusan STOVIA Batavia (1914) dan Sekolah Hakim Pribumi. Bergabung dengan IVH 1919 sebagai dosen sejarah hukum adat. Kepakarannya: perjanjian-perjanjian VOC-Mataram dan dampak Perang Suksesi Jawa terhadap struktur masyarakat. Satu-satunya anggota Tim Tuchtraad yang berkebangsaan Hindia pribumi — sebuah preseden bagi IVH.</div>
+        </div>
+      </div>
+      <div class="page-num">76</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 77 — Biodata Penerbit ══ -->
+    <div class="page" data-page="77">
+      <div class="page-inner">
+        <div class="chapter-label">Lampiran — Biodata Penerbit</div>
+        <h2 class="section-heading">Instituut voor Huisdeken — Profil Institusi</h2>
+
+        <div class="penerbit-seal">
+          <svg viewBox="0 0 160 160" width="120" height="120">
+            <circle cx="80" cy="80" r="75" fill="none" stroke="#8B6914" stroke-width="2"/>
+            <circle cx="80" cy="80" r="68" fill="none" stroke="#8B6914" stroke-width="0.8"/>
+            <text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-family="UnifrakturMaguntia,serif" font-size="36" fill="#8B6914">IVH</text>
+            <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="10" fill="#8B6914">INSTITUUT VOOR</text>
+            <text x="50%" y="67%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="10" fill="#8B6914">HUISDEKEN</text>
+            <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-family="IM Fell English,serif" font-size="8" fill="#8B6914">BATAVIA · MDCCCXCII</text>
+            <text x="50%" y="26%" dominant-baseline="middle" text-anchor="middle" font-size="12" fill="#8B6914">✦ ✦ ✦</text>
+          </svg>
+        </div>
+
+        <div class="body-text">
+          <p style="text-align:center;font-style:italic;margin-bottom:12px"><em>„Kennis, Karakter, Keberanian"</em> — Moto IVH</p>
+        </div>
+
+        <div class="penerbit-info-grid">
+          <div class="penerbit-info-box">
+            <div class="penerbit-info-title">Sejarah Institusi</div>
+            Didirikan 1892 oleh sekelompok pengusaha dan akademisi Batavia yang percaya bahwa Hindia membutuhkan institusi pendidikan tinggi yang tidak sekadar mengajarkan ilmu teknis, melainkan membentuk karakter. Nama "Huisdeken" — yang berarti penjaga rumah — dipilih sebagai simbol tanggung jawab terhadap komunitas yang lebih luas.
+          </div>
+          <div class="penerbit-info-box">
+            <div class="penerbit-info-title">Struktur & Program</div>
+            IVH memiliki empat departemen utama: Sejarah & Hukum, Ilmu Alam & Teknik, Sastra & Bahasa, dan Ekonomi & Dagang. Program studi berlangsung 4 tahun. Bahasa pengantar: Belanda dan Melayu. Pada 1924, IVH memiliki 847 bewoner aktif dari 23 latar belakang etnis berbeda.
+          </div>
+          <div class="penerbit-info-box">
+            <div class="penerbit-info-title">Tuchtraad & Publikasi</div>
+            Tuchtraad IVH adalah badan disiplin sekaligus lembaga penerbitan akademik. Sejak 1900, Tuchtraad menerbitkan <em>Berichten van IVH</em> (jurnal akademik triwulanan) dan berbagai boek pendidikan termasuk seri Boek Pengetahuan Historis yang menjadi seri tempat boek ini diterbitkan.
+          </div>
+          <div class="penerbit-info-box">
+            <div class="penerbit-info-title">Alamat & Kontak</div>
+            Gedung Utama IVH<br/>Jl. Weltevreden No. 14<br/>Batavia — Hindia Belanda<br/><br/>
+            Kantor Tuchtraad (penerbitan):<br/>Jl. Weltevreden No. 16<br/>Jam kerja: 08.00–16.00 (Senin–Jumat)<br/>
+            Drukkerij: <em>De Ster, Weltevreden</em>
+          </div>
+        </div>
+      </div>
+      <div class="page-num">77</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 78 — Catatan Akhir Penulis ══ -->
+    <div class="page" data-page="78">
+      <div class="page-inner">
+        <div class="chapter-label">Penutup</div>
+        <h2 class="section-heading">Catatan Akhir — <em>Nawoord</em></h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">31 Desember 1925 — malam terakhir sebelum dicetak</span>
+            <span class="diary-loc">Meja kerja pribadi, Weltevreden — lampu minyak, hujan deras</span>
+          </div>
+          <p class="diary-body">Naskah ini selesai. Tiga ratus halaman yang dipadatkan menjadi delapan puluh. Setiap fakta yang dipertahankan adalah fakta yang sudah melewati setidaknya dua sumber. Setiap angka dapat ditelusuri ke buku besar arsip yang berdebu. Setiap pertanyaan refleksi telah diuji dalam diskusi kelas nyata dengan bewoner yang tidak takut menantang argumen prefect-nya.</p>
+          <p class="diary-body">Yang tidak bisa kami sertakan dalam delapan puluh halaman ini: suara-suara yang tidak pernah tercatat. Petani Banda yang meninggal tanpa nama. Budak-budak dari Bali yang tidak pernah kembali. Istri-istri pejabat VOC yang hidupnya tidak pernah cukup penting untuk dicatat. Sejarah selalu merupakan pilihan — dan pilihan siapa yang layak diingat adalah pilihan yang penuh kuasa.</p>
+          <p class="diary-body">Boek ini tidak sempurna. Sejarah tidak pernah sempurna. Yang bisa kami janjikan adalah ini: setiap halaman ditulis dengan keyakinan bahwa bewoner yang membacanya berhak mendapat lebih dari sekadar hafalan — mereka berhak mendapat <em>pengertian</em>.</p>
+          <p class="diary-body">Selamat membaca, dan selamat berpikir.</p>
+        </div>
+        <div class="signature-block" style="margin-top:20px">
+          <div class="sig-line"></div>
+          <em>Tim Tuchtraad IVH</em><br/>
+          <span>Batavia, 1 Januari 1926</span>
+        </div>
+        <div style="margin-top:24px;text-align:center">
+          <div style="font-family:var(--font-fraktur);font-size:2.5rem;color:var(--gold-dark)">Finis</div>
+          <div style="font-family:var(--font-body);font-size:0.75rem;color:var(--sepia-mid);margin-top:4px"><em>„Het einde van een boek is het begin van een gedachte."</em></div>
+          <div style="font-family:var(--font-body);font-size:0.68rem;color:var(--sepia-mid)">(Akhir sebuah buku adalah awal dari sebuah pemikiran.)</div>
+        </div>
+      </div>
+      <div class="page-num">78</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 79 — Halaman Terima Kasih ══ -->
+    <div class="page" data-page="79">
+      <div class="page-inner">
+        <div class="chapter-label">Ucapan Terima Kasih</div>
+        <h2 class="section-heading">Dankbetuiging — Ucapan Terima Kasih</h2>
+        <div class="diary-entry">
+          <div class="diary-header">
+            <span class="diary-date">Desember 1925</span>
+            <span class="diary-loc">IVH Batavia</span>
+          </div>
+          <p class="diary-body">Tidak ada boek yang lahir dari satu tangan. Ini adalah tempat kami mencatat hutang-hutang terima kasih yang tidak bisa dibayar cukup dengan kata-kata saja.</p>
+        </div>
+        <div class="body-text">
+          <p>Tim Tuchtraad IVH menyampaikan terima kasih yang sebesar-besarnya kepada:</p>
+          <ul class="styled-ul">
+            <li><strong>Seluruh bewoner angkatan 1922–1925</strong> yang telah menjadi "penguji pertama" materi-materi dalam boek ini — pertanyaan-pertanyaan mereka yang tajam, sanggahan-sanggahan yang tidak tedeng aling-aling, dan antusiasme yang membuat malam-malam pengerjaan naskah terasa kurang panjang dari yang sebenarnya.</li>
+            <li><strong>Bataviaasch Genootschap van Kunsten en Wetenschappen</strong> atas akses ke arsip-arsip yang tak ternilai serta koleksi lukisan historis yang digunakan sebagai ilustrasi.</li>
+            <li><strong>Staf Perpustakaan IVH</strong>, khususnya Juffrouw E. Valentijn yang tidak pernah menolak permintaan buku referensi betapapun anehnya.</li>
+            <li><strong>Keluarga-keluarga para penulis</strong> yang dengan sabar menerima absennya anggota keluarga mereka di meja makan selama berbulan-bulan.</li>
+            <li><strong>Drukkerij De Ster, Weltevreden</strong>, khususnya Tuan F. Brouwer dan seluruh timnya yang mengubah naskah kasar menjadi boek yang bisa dipegang.</li>
+          </ul>
+          <p>Dan yang paling penting — terima kasih kepada <strong>sejarah itu sendiri</strong>, yang tidak pernah berhenti menjadi relevan betapapun jauhnya jarak waktu.</p>
+        </div>
+        <div style="margin-top:20px; text-align:center; border-top:1px solid var(--gold-dark); padding-top:16px">
+          <div style="font-family:var(--font-display);font-size:0.9rem;font-style:italic;color:var(--ink-fade)">
+            Boek ini didedikasikan kepada semua orang yang namanya tidak pernah tercatat dalam sejarah — tetapi yang hidupnya membentuknya.
+          </div>
+        </div>
+      </div>
+      <div class="page-num">79</div>
+    </div>
+
+    <!-- ══════════════════ PAGE 80 — HALAMAN TERAKHIR / KOLOFON ══ -->
+    <div class="page" data-page="80">
+      <div class="page-inner" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;text-align:center;padding:40px">
+        <div class="cover-ornament-top" style="margin-bottom:16px">
+          <span class="orn-rule"></span><span class="orn-diamond">❖</span><span class="orn-rule"></span>
+        </div>
+        <div style="font-family:var(--font-fraktur);font-size:3.5rem;color:var(--gold-dark);line-height:1">IVH</div>
+        <div style="font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.2em;color:var(--sepia-mid);margin-bottom:16px;text-transform:uppercase">Instituut voor Huisdeken · Batavia</div>
+        <div style="border-top:1px solid var(--gold-dark);border-bottom:1px solid var(--gold-dark);padding:16px 0;width:100%;margin-bottom:16px">
+          <div style="font-family:var(--font-display);font-size:1.4rem;font-style:italic;color:var(--ink);margin-bottom:6px">Ilmu Sejarah VOC</div>
+          <div style="font-family:var(--font-body);font-size:0.8rem;color:var(--sepia-mid)">Vereenigde Oost-Indische Compagnie 1602–1799</div>
+          <div style="font-family:var(--font-body);font-size:0.75rem;color:var(--sepia-mid);margin-top:4px">Edisi Pertama · Batavia, 1 Januari 1926</div>
+        </div>
+        <div style="font-family:var(--font-body);font-size:0.75rem;color:var(--sepia-mid);line-height:1.8;margin-bottom:16px">
+          Dicetak di <em>Drukkerij de Ster, Weltevreden</em><br/>
+          Kertas: <em>Java Bond Paper</em> 80 gr<br/>
+          Jenis huruf: <em>Didot</em> (judul) &amp; <em>Garamond</em> (isi)<br/>
+          Cetakan pertama: 5.000 <span class="nl" data-tip="Eksemplar">exemplaar</span><br/>
+          Nomor Boek: IVH/HST/1926/001–III
+        </div>
+        <div style="font-family:var(--font-body);font-size:0.7rem;color:var(--sepia-mid);font-style:italic;margin-bottom:20px">
+          Hak cipta dilindungi Reglement op de Auteursrechten 1912.<br/>
+          Dilarang memperbanyak tanpa izin tertulis dari Tuchtraad IVH.
+        </div>
+        <div style="font-family:var(--font-fraktur);font-size:1.5rem;color:var(--gold);margin-bottom:8px">❖ Finis Coronat Opus ❖</div>
+        <div style="font-family:var(--font-body);font-size:0.68rem;color:var(--sepia-mid);font-style:italic">(Akhir memahkotai karya)</div>
+        <div class="cover-ornament-bot" style="margin-top:20px">
+          <span class="orn-rule"></span><span class="orn-diamond">❖</span><span class="orn-rule"></span>
+        </div>
+        <div style="margin-top:20px;font-family:var(--font-body);font-size:0.68rem;color:rgba(139,105,20,0.5)">
+          ← Navigasi: ◀▶ tombol · ← → keyboard · swipe/drag layar →
+        </div>
+        <div style="margin-top:6px;font-family:var(--font-body);font-size:0.65rem;color:rgba(139,105,20,0.4)">
+          Jilid I: Hal. 1–30 (part1.html) · Jilid II: Hal. 31–60 (part2.html) · Jilid III: Hal. 61–80 (part3.html)
+        </div>
+      </div>
+      <div class="page-num">80</div>
+    </div>
+
+  </div><!-- end book-stage -->
+  <button class="nav-btn" id="btn-next">&#8250;</button>
+</div>
+
+<div id="tooltip-box"></div>
+
+<div id="export-overlay" class="hidden">
+  <div class="export-modal">
+    <div class="export-title">📷 Ekspor Halaman sebagai PNG</div>
+    <p>Mengekspor halaman <strong id="export-page-num"></strong>...</p>
+    <div id="export-progress">Mempersiapkan...</div>
+    <button class="game-btn" id="export-cancel">Batal</button>
+  </div>
+</div>
+
+<script>
+/* ── GAME: JODOHKAN ── */
+(function(){
+  const PAIRS = [
+    { left:'Berdirinya VOC', right:'20 Maret 1602' },
+    { left:'Pendirian Batavia', right:'30 Mei 1619' },
+    { left:'Pembantaian Banda', right:'1621' },
+    { left:'Perjanjian Bongaya', right:'18 November 1667' },
+    { left:'Pembantaian Cina Batavia', right:'9–10 Oktober 1740' },
+    { left:'VOC bubar resmi', right:'31 Desember 1799' },
+    { left:'Budi Utomo berdiri', right:'20 Mei 1908' },
+    { left:'Ethische Politiek', right:'1901' }
+  ];
+
+  function initJodo(){
+    const grid = document.getElementById('jodo-grid');
+    const scoreEl = document.getElementById('jodo-score');
+    const resultEl = document.getElementById('jodo-result');
+    if(!grid) return;
+
+    let score = 0;
+    let selectedLeft = null;
+    let selectedRight = null;
+    let matched = new Set();
+
+    // Shuffle rights
+    const rights = PAIRS.map(p=>p.right).sort(()=>Math.random()-0.5);
+
+    grid.innerHTML = `
+      <div>
+        <div class="match-label">Peristiwa</div>
+        ${PAIRS.map((p,i)=>`<div class="match-item" data-side="left" data-idx="${i}">${p.left}</div>`).join('')}
+      </div>
+      <div>
+        <div class="match-label">Tahun / Tanggal</div>
+        ${rights.map((r,i)=>`<div class="match-item" data-side="right" data-val="${r}" data-idx="${i}">${r}</div>`).join('')}
+      </div>
+    `;
+
+    grid.querySelectorAll('.match-item').forEach(el=>{
+      el.addEventListener('click',()=>{
+        const side = el.dataset.side;
+        if(matched.has(el)) return;
+        if(side==='left'){
+          grid.querySelectorAll('[data-side="left"]').forEach(e=>e.classList.remove('selected'));
+          selectedLeft = el;
+          el.classList.add('selected');
+        } else {
+          grid.querySelectorAll('[data-side="right"]').forEach(e=>e.classList.remove('selected'));
+          selectedRight = el;
+          el.classList.add('selected');
+        }
+        // Try match
+        if(selectedLeft && selectedRight){
+          const idx = parseInt(selectedLeft.dataset.idx);
+          const correctRight = PAIRS[idx].right;
+          const chosenRight = selectedRight.dataset.val;
+          if(correctRight===chosenRight){
+            selectedLeft.classList.remove('selected');
+            selectedRight.classList.remove('selected');
+            selectedLeft.classList.add('matched-correct');
+            selectedRight.classList.add('matched-correct');
+            matched.add(selectedLeft); matched.add(selectedRight);
+            score++;
+            if(scoreEl) scoreEl.textContent=score;
+            if(score===PAIRS.length && resultEl){
+              resultEl.classList.remove('hidden');
+              resultEl.innerHTML='🏆 Semua pasangan benar! Anda siap menghadapi UAS IVH.';
+            }
+          } else {
+            selectedLeft.classList.add('matched-wrong');
+            selectedRight.classList.add('matched-wrong');
+            setTimeout(()=>{
+              selectedLeft.classList.remove('matched-wrong','selected');
+              selectedRight.classList.remove('matched-wrong','selected');
+            },800);
+          }
+          selectedLeft=null; selectedRight=null;
+        }
+      });
+    });
+  }
+
+  document.getElementById('jodo-reset')?.addEventListener('click',()=>{
+    document.getElementById('jodo-score').textContent='0';
+    const res=document.getElementById('jodo-result');
+    if(res) res.classList.add('hidden');
+    initJodo();
+  });
+
+  // Init on load
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded', initJodo);
+  } else {
+    initJodo();
+  }
+})();
+</script>
+
+<script src="book.js"></script>
+</body>
+</html>
